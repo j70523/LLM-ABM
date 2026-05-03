@@ -1,6 +1,9 @@
 import geopandas as gpd
+import pandas as pd
 import json
 import numpy as np
+import requests
+from shapely.geometry import Point
 
 # Load shapefile
 print("Loading Shapefile...")
@@ -18,9 +21,45 @@ gdf['centroid'] = gdf.geometry.centroid
 gdf['cx'] = gdf.centroid.x
 gdf['cy'] = gdf.centroid.y
 
-# Assign mock population (or read if exists, but we'll mock it)
-np.random.seed(42)
-gdf['population'] = np.random.randint(500, 3000, size=len(gdf))
+# Load real population data from CSV
+print("Loading Population Data...")
+pop_df = pd.read_csv('data/STAT (1)/114年12月行政區人口統計_村里_臺南市.csv', skiprows=[1])
+gdf = gdf.merge(pop_df[['TOWN', 'VILLAGE', 'P_CNT']], left_on=['TOWNNAME', 'VILLNAME'], right_on=['TOWN', 'VILLAGE'], how='left')
+gdf['population'] = gdf['P_CNT'].fillna(500).astype(int) # Default 500 if missing
+print(f"Mapped population for {gdf['P_CNT'].notna().sum()} out of {len(gdf)} villages.")
+
+# Fetch POI from OSM to calculate attraction score
+print("Fetching POI data from OpenStreetMap...")
+bbox = gdf.total_bounds # [minx, miny, maxx, maxy] -> [min_lon, min_lat, max_lon, max_lat]
+overpass_query = f"""
+[out:json][timeout:50];
+(
+  node["amenity"]({bbox[1]},{bbox[0]},{bbox[3]},{bbox[2]});
+  node["shop"]({bbox[1]},{bbox[0]},{bbox[3]},{bbox[2]});
+  node["office"]({bbox[1]},{bbox[0]},{bbox[3]},{bbox[2]});
+  node["tourism"]({bbox[1]},{bbox[0]},{bbox[3]},{bbox[2]});
+);
+out center;
+"""
+try:
+    response = requests.post("https://overpass-api.de/api/interpreter", data={'data': overpass_query}, headers={'User-Agent': 'TainanABM/1.0'})
+    data = response.json()
+    print(f"Fetched {len(data.get('elements', []))} POIs from OSM.")
+    pois = [Point(e['lon'], e['lat']) for e in data.get('elements', []) if 'lat' in e and 'lon' in e]
+    if pois:
+        pois_gdf = gpd.GeoDataFrame(geometry=pois, crs="EPSG:4326")
+        joined = gpd.sjoin(gdf, pois_gdf, how="left", predicate="intersects")
+        poi_counts = joined.groupby('id').size()
+        # Some might be 1 even if 0 pois because of left join counting the NaNs. Wait, groupby size on left join counts rows, including NaNs!
+        # We should drop NaNs before groupby, or use count('index_right')
+        poi_counts = joined.groupby('id')['index_right'].count()
+        gdf['attraction'] = gdf['id'].map(poi_counts).fillna(0) + 1 # +1 as baseline so nowhere is 0
+    else:
+        gdf['attraction'] = 1
+except Exception as e:
+    print(f"Failed to fetch OSM data: {e}")
+    gdf['attraction'] = 1
+
 
 # Calculate Adjacency
 print("Calculating Adjacency...")
@@ -68,7 +107,8 @@ for idx, row in gdf.iterrows():
         'name': f"{row['TOWNNAME']}{row['VILLNAME']}",
         'cx': row['cx'],
         'cy': row['cy'],
-        'population': int(row['population'])
+        'population': int(row['population']),
+        'attraction': int(row.get('attraction', 1))
     })
 
 network_data = {

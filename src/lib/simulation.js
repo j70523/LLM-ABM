@@ -102,6 +102,15 @@ export function generateSimulationData(day, scenario, totalAgents) {
   // Generate Agents
   const agents = generateAgents(totalAgents, nodes, worldPopulation);
 
+  // Pre-calculate cumulative attraction probability for destination choice
+  const totalAttraction = nodes.reduce((sum, n) => sum + (n.attraction || 1), 0);
+  const attrThresholds = [];
+  let attrCum = 0;
+  for (const node of nodes) {
+    attrCum += (node.attraction || 1) / totalAttraction;
+    attrThresholds.push({ id: node.id, threshold: attrCum });
+  }
+
   let totalTrips = 0;
   const modeCounts = { '汽車': 0, '機車': 0, '大眾運輸': 0, '步行/單車': 0 };
 
@@ -116,17 +125,35 @@ export function generateSimulationData(day, scenario, totalAgents) {
     let destNodeId = agent.homeNode;
     
     if (agent.type === 'Worker' || agent.type === 'Student') {
-      // Commuters travel further (completely random node for simplicity)
-      const randIdx = Math.floor(Math.random() * nodes.length);
-      destNodeId = nodes[randIdx].id;
+      // Commuters travel based on attraction score instead of purely random
+      const randAttr = Math.random();
+      destNodeId = attrThresholds.find(t => randAttr <= t.threshold)?.id || nodes[0].id;
     } else if (agent.type === 'Retiree') {
       // Retirees travel to nearby nodes
       const neighbors = adjList[agent.homeNode];
       if (neighbors && neighbors.length > 0) {
-        const randIdx = Math.floor(Math.random() * neighbors.length);
-        destNodeId = neighbors[randIdx];
+        // Weighted by neighbor's attraction
+        let sumAttr = 0;
+        const nNodes = neighbors.map(nId => {
+          const node = nodes.find(n => n.id === nId);
+          sumAttr += (node ? (node.attraction || 1) : 1);
+          return { id: nId, attr: node ? (node.attraction || 1) : 1 };
+        });
+        
+        const rAttr = Math.random() * sumAttr;
+        let cAttr = 0;
+        for (const n of nNodes) {
+          cAttr += n.attr;
+          if (rAttr <= cAttr) {
+            destNodeId = n.id;
+            break;
+          }
+        }
       }
     }
+
+    // Store daytimeDest on the agent for display
+    agent.daytimeDest = destNodeId;
 
     // If destination is same as home, no inter-village travel
     if (agent.homeNode === destNodeId) {
@@ -192,6 +219,7 @@ export function generateSimulationData(day, scenario, totalAgents) {
   return {
     nodes,
     links,
+    agents,
     stats: {
       totalTrips,
       avgTravelTime,

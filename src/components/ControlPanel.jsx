@@ -10,7 +10,11 @@ export default function ControlPanel({
   onRunSimulation,
   onReset,
   onScenarioChange,
-  onAgentsChange
+  onAgentsChange,
+  batchDays,
+  onRunBatch,
+  onBatchDaysChange,
+  onShowAgentList
 }) {
   return (
     <div className="flex flex-col h-full p-6 text-white overflow-y-auto">
@@ -76,17 +80,48 @@ export default function ControlPanel({
               onChange={(e) => onAgentsChange(Number(e.target.value))}
               className="w-full accent-blue-500"
             />
-            <div className="flex justify-between text-xs text-neutral-500 mt-2 font-mono">
+            <div className="flex justify-between text-xs text-neutral-500 mt-2 font-mono mb-4">
               <span>1k</span>
               <span className="text-blue-400 font-bold">{agents.toLocaleString()}</span>
               <span>20k</span>
             </div>
+            <button
+              onClick={onShowAgentList}
+              className="w-full py-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg text-sm font-medium text-neutral-300 transition-colors"
+            >
+              查看代理人列表
+            </button>
           </div>
         </div>
       </div>
 
       {/* Action Buttons */}
       <div className="flex flex-col gap-3 mt-auto pt-6">
+        <div className="flex gap-2">
+          <input
+            type="number"
+            min="1"
+            max="365"
+            value={batchDays}
+            onChange={(e) => onBatchDaysChange(Number(e.target.value))}
+            className="w-20 bg-neutral-800 border border-neutral-700 rounded-xl px-3 py-2 text-sm text-white text-center"
+            title="批量模擬天數"
+          />
+          <button
+            onClick={onRunBatch}
+            disabled={isPlaying}
+            className={clsx(
+              "flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-medium transition-all duration-300",
+              isPlaying
+                ? "bg-purple-500/50 text-purple-200 cursor-not-allowed"
+                : "bg-purple-600 hover:bg-purple-500 text-white shadow-[0_0_15px_rgba(147,51,234,0.3)]"
+            )}
+          >
+            <Play size={18} fill="currentColor" />
+            {isPlaying ? '運算中...' : '批量執行'}
+          </button>
+        </div>
+
         <button
           onClick={onRunSimulation}
           disabled={isPlaying}

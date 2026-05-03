@@ -1,11 +1,12 @@
 import React from 'react';
 import { 
   PieChart, Pie, Cell, Tooltip as RechartsTooltip, ResponsiveContainer, 
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, LabelList 
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, LabelList,
+  LineChart, Line
 } from 'recharts';
 import { Clock, Activity, TrendingUp } from 'lucide-react';
 
-export default function AnalyticsPanel({ stats }) {
+export default function AnalyticsPanel({ stats, simHistory }) {
   if (!stats) return <div className="h-full p-6 flex items-center justify-center text-neutral-500">載入中...</div>;
 
   const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#6366f1'];
@@ -75,6 +76,49 @@ export default function AnalyticsPanel({ stats }) {
           ))}
         </div>
       </div>
+
+      {/* Historical Trend */}
+      {simHistory && simHistory.length > 1 && (
+        <div className="mb-8">
+          <h3 className="text-sm font-semibold text-neutral-300 mb-4">歷史總旅次趨勢</h3>
+          <div className="h-40">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={simHistory} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
+                <XAxis 
+                  dataKey="day" 
+                  tick={{ fill: '#9ca3af', fontSize: 10 }}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={(val) => `D${val}`}
+                />
+                <YAxis 
+                  tick={{ fill: '#9ca3af', fontSize: 10 }}
+                  tickLine={false}
+                  axisLine={false}
+                  width={35}
+                  tickFormatter={(val) => val >= 1000 ? `${(val / 1000).toFixed(0)}k` : val}
+                />
+                <RechartsTooltip 
+                  contentStyle={{ backgroundColor: '#171717', borderColor: '#333', borderRadius: '8px' }}
+                  labelStyle={{ color: '#9ca3af' }}
+                  itemStyle={{ color: '#60a5fa' }}
+                  labelFormatter={(val) => `第 ${val} 天`}
+                />
+                <Line 
+                  type="monotone" 
+                  dataKey="totalTrips" 
+                  name="總旅次"
+                  stroke="#3b82f6" 
+                  strokeWidth={2}
+                  dot={false}
+                  activeDot={{ r: 4 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
 
       {/* Congestion Ranking */}
       <div className="mt-auto">
