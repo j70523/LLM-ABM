@@ -6,36 +6,35 @@ import AgentListModal from './components/AgentListModal';
 import { generateSimulationData } from './lib/simulation';
 
 function App() {
-  const [day, setDay] = useState(1);
+  const [hour, setHour] = useState(0);
   const [scenario, setScenario] = useState('baseline');
-  const [agents, setAgents] = useState(5000);
   const [isPlaying, setIsPlaying] = useState(false);
   const [simData, setSimData] = useState(null);
   const [simHistory, setSimHistory] = useState([]);
   const [showAgentList, setShowAgentList] = useState(false);
-  const [batchDays, setBatchDays] = useState(30);
+  const [batchHours, setBatchHours] = useState(24);
 
   useEffect(() => {
-    if (day === 1) {
-      const initialData = generateSimulationData(day, scenario, agents);
+    if (hour === 0) {
+      const initialData = generateSimulationData(hour, scenario);
       setSimData(initialData);
       setSimHistory([{ 
-        day: 1, 
+        hour: 0, 
         totalTrips: initialData.stats.totalTrips, 
         avgTravelTime: initialData.stats.avgTravelTime 
       }]);
     }
-  }, [day, scenario, agents]);
+  }, [hour, scenario]);
 
   const handleRunSimulation = () => {
     setIsPlaying(true);
     setTimeout(() => {
-      const nextDay = day + 1;
-      const newData = generateSimulationData(nextDay, scenario, agents);
-      setDay(nextDay);
+      const nextHour = hour + 1;
+      const newData = generateSimulationData(nextHour, scenario);
+      setHour(nextHour);
       setSimData(newData);
       setSimHistory(prev => [...prev, {
-        day: nextDay,
+        hour: nextHour,
         totalTrips: newData.stats.totalTrips,
         avgTravelTime: newData.stats.avgTravelTime
       }]);
@@ -47,20 +46,20 @@ function App() {
     if (isPlaying) return;
     setIsPlaying(true);
     
-    let currentDay = day;
+    let currentHour = hour;
     let history = [...simHistory];
     let latestData = simData;
 
-    for (let i = 0; i < batchDays; i++) {
-      currentDay++;
-      latestData = generateSimulationData(currentDay, scenario, agents);
+    for (let i = 0; i < batchHours; i++) {
+      currentHour++;
+      latestData = generateSimulationData(currentHour, scenario);
       history.push({
-        day: currentDay,
+        hour: currentHour,
         totalTrips: latestData.stats.totalTrips,
         avgTravelTime: latestData.stats.avgTravelTime
       });
       
-      setDay(currentDay);
+      setHour(currentHour);
       setSimData(latestData);
       setSimHistory([...history]);
       
@@ -71,13 +70,12 @@ function App() {
   };
 
   const handleReset = () => {
-    setDay(1);
+    setHour(0);
     setScenario('baseline');
-    setAgents(5000);
-    const initialData = generateSimulationData(1, 'baseline', 5000);
+    const initialData = generateSimulationData(0, 'baseline');
     setSimData(initialData);
     setSimHistory([{ 
-      day: 1, 
+      hour: 0, 
       totalTrips: initialData.stats.totalTrips, 
       avgTravelTime: initialData.stats.avgTravelTime 
     }]);
@@ -102,17 +100,15 @@ function App() {
       <div className="absolute top-8 left-8 bottom-8 w-80 z-10 pointer-events-none">
         <div className="h-full pointer-events-auto rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-neutral-800/50 backdrop-blur-md bg-neutral-900/80">
           <ControlPanel 
-            day={day}
+            hour={hour}
             scenario={scenario}
-            agents={agents}
             isPlaying={isPlaying}
-            batchDays={batchDays}
+            batchHours={batchHours}
             onRunSimulation={handleRunSimulation}
             onRunBatch={handleBatchSimulation}
             onReset={handleReset}
             onScenarioChange={setScenario}
-            onAgentsChange={setAgents}
-            onBatchDaysChange={setBatchDays}
+            onBatchHoursChange={setBatchHours}
             onShowAgentList={() => setShowAgentList(true)}
           />
         </div>

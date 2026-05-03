@@ -48,8 +48,8 @@ export default function MainMap({ nodes, links, isPlaying }) {
   return (
     <div className="relative w-full h-full bg-neutral-950 overflow-hidden flex flex-col items-center justify-center">
       {/* Background grid */}
-      <div 
-        className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+      <div
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
         style={{
           backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
           backgroundSize: '40px 40px'
@@ -57,11 +57,13 @@ export default function MainMap({ nodes, links, isPlaying }) {
       />
 
       <TransformWrapper
-        initialScale={1}
-        minScale={0.5}
-        maxScale={10}
-        wheel={{ step: 0.05, smoothStep: 0.005 }} // Google Maps style smooth zoom
-        doubleClick={{ mode: "zoomIn" }}
+        initialScale={0.2}
+        minScale={0.2}
+        maxScale={30}
+        centerOnInit
+        limitToBounds={true}
+        wheel={{ step: 0.02, smoothStep: 0.003 }}
+        doubleClick={{ mode: "zoomIn", step: 0.3 }}
       >
         {({ zoomIn, zoomOut, resetTransform }) => (
           <>
@@ -81,10 +83,10 @@ export default function MainMap({ nodes, links, isPlaying }) {
               <svg onClick={handleSvgClick} viewBox={`0 0 ${width} ${height}`} className="w-full h-full min-w-[100vw] min-h-[100vh]">
                 <defs>
                   <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                     <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
                     </feMerge>
                   </filter>
                 </defs>
@@ -150,10 +152,10 @@ export default function MainMap({ nodes, links, isPlaying }) {
                   const [x, y] = projection([node.cx, node.cy]);
                   return (
                     <g key={`node-${node.id}`} className="pointer-events-none">
-                      <circle 
-                        cx={x} 
-                        cy={y} 
-                        r={1.5 + node.congestion * 3} 
+                      <circle
+                        cx={x}
+                        cy={y}
+                        r={1.5 + node.congestion * 3}
                         className={clsx(
                           "stroke-[0.5] transition-colors duration-500",
                           getCongestionColor(node.congestion)
@@ -174,22 +176,22 @@ export default function MainMap({ nodes, links, isPlaying }) {
           <h3 className="text-white font-bold text-xl mb-1">{selectedNode.name}</h3>
           <div className="mt-4 text-sm text-neutral-300 space-y-2">
             <p className="flex justify-between">
-              <span>村里總人口:</span> 
+              <span>村里總人口:</span>
               <span className="text-white font-mono">{selectedNode.population.toLocaleString()} 人</span>
             </p>
             <p className="flex justify-between">
-              <span>目前活躍 Agents:</span> 
+              <span>目前活躍 Agents:</span>
               <span className="text-blue-400 font-bold font-mono">{selectedNode.activeAgents.toLocaleString()} 人</span>
             </p>
             <div className="h-px bg-neutral-800 my-2" />
             <p className="flex justify-between">
-              <span>當下壅塞度:</span> 
+              <span>當下壅塞度:</span>
               <span className={clsx("font-bold font-mono", selectedNode.congestion > 0.8 ? "text-red-400" : "text-yellow-400")}>
                 {(selectedNode.congestion * 100).toFixed(0)}%
               </span>
             </p>
           </div>
-          <button 
+          <button
             onClick={() => setSelectedNode(null)}
             className="mt-4 w-full py-2 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-xs text-neutral-400"
           >

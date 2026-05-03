@@ -86,11 +86,11 @@ export default function AnalyticsPanel({ stats, simHistory }) {
               <LineChart data={simHistory} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                 <XAxis 
-                  dataKey="day" 
+                  dataKey="hour" 
                   tick={{ fill: '#9ca3af', fontSize: 10 }}
                   tickLine={false}
                   axisLine={false}
-                  tickFormatter={(val) => `D${val}`}
+                  tickFormatter={(val) => `${val}h`}
                 />
                 <YAxis 
                   tick={{ fill: '#9ca3af', fontSize: 10 }}
@@ -103,7 +103,7 @@ export default function AnalyticsPanel({ stats, simHistory }) {
                   contentStyle={{ backgroundColor: '#171717', borderColor: '#333', borderRadius: '8px' }}
                   labelStyle={{ color: '#9ca3af' }}
                   itemStyle={{ color: '#60a5fa' }}
-                  labelFormatter={(val) => `第 ${val} 天`}
+                  labelFormatter={(val) => `第 ${Math.floor(val/24)+1} 天 ${String(val%24).padStart(2, '0')}:00`}
                 />
                 <Line 
                   type="monotone" 

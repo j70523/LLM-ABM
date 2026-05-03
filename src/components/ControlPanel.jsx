@@ -3,17 +3,15 @@ import { Play, RotateCcw, Settings, Users, Calendar } from 'lucide-react';
 import clsx from 'clsx';
 
 export default function ControlPanel({
-  day,
+  hour,
   scenario,
-  agents,
   isPlaying,
   onRunSimulation,
   onReset,
   onScenarioChange,
-  onAgentsChange,
-  batchDays,
+  batchHours,
   onRunBatch,
-  onBatchDaysChange,
+  onBatchHoursChange,
   onShowAgentList
 }) {
   return (
@@ -30,10 +28,10 @@ export default function ControlPanel({
         <div className="bg-neutral-800/60 p-4 rounded-xl border border-neutral-700/50 shadow-inner">
           <div className="flex items-center gap-3 text-neutral-300 mb-2">
             <Calendar size={18} className="text-blue-400" />
-            <span className="font-medium text-sm">模擬天數</span>
+            <span className="font-medium text-sm">模擬時間</span>
           </div>
           <div className="text-3xl font-mono font-bold text-white">
-            第 {day} 天
+            第 {Math.floor(hour / 24) + 1} 天 {String(hour % 24).padStart(2, '0')}:00
           </div>
         </div>
 
@@ -68,29 +66,13 @@ export default function ControlPanel({
 
           {/* Agents */}
           <div>
-            <label className="flex items-center gap-2 text-sm font-medium text-neutral-300 mb-3">
-              <Users size={16} /> 活躍市民數量
-            </label>
-            <input
-              type="range"
-              min="1000"
-              max="20000"
-              step="1000"
-              value={agents}
-              onChange={(e) => onAgentsChange(Number(e.target.value))}
-              className="w-full accent-blue-500"
-            />
-            <div className="flex justify-between text-xs text-neutral-500 mt-2 font-mono mb-4">
-              <span>1k</span>
-              <span className="text-blue-400 font-bold">{agents.toLocaleString()}</span>
-              <span>20k</span>
-            </div>
             <button
               onClick={onShowAgentList}
               className="w-full py-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg text-sm font-medium text-neutral-300 transition-colors"
             >
-              查看代理人列表
+              查看代理人列表 (群體)
             </button>
+            <p className="text-xs text-neutral-500 mt-2 text-center">自動依據村里人口比例生成</p>
           </div>
         </div>
       </div>
@@ -101,11 +83,11 @@ export default function ControlPanel({
           <input
             type="number"
             min="1"
-            max="365"
-            value={batchDays}
-            onChange={(e) => onBatchDaysChange(Number(e.target.value))}
+            max="1000"
+            value={batchHours}
+            onChange={(e) => onBatchHoursChange(Number(e.target.value))}
             className="w-20 bg-neutral-800 border border-neutral-700 rounded-xl px-3 py-2 text-sm text-white text-center"
-            title="批量模擬天數"
+            title="批量模擬小時"
           />
           <button
             onClick={onRunBatch}
@@ -133,7 +115,7 @@ export default function ControlPanel({
           )}
         >
           <Play size={18} fill="currentColor" />
-          {isPlaying ? '運算中...' : '執行下一天'}
+          {isPlaying ? '運算中...' : '執行下一小時'}
         </button>
         
         <button

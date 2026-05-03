@@ -1,4 +1,6 @@
 import networkData from '../../public/network.json';
+import { generateAgents } from './agents';
+import { generateAllTripChains } from './tripChain';
 
 const { nodes: baseNodes, links: baseLinks, adjList } = networkData;
 
@@ -42,47 +44,14 @@ function greedyRoute(uId, targetId, nodes) {
   return path;
 }
 
-// Generate Agent Profiles based on totalAgents
-function generateAgents(totalAgents, nodes, worldPopulation) {
-  const agents = [];
-  
-  // Create a cumulative probability array for assigning home nodes based on population
-  const popThresholds = [];
-  let cumulative = 0;
-  for (const node of nodes) {
-    cumulative += node.population / worldPopulation;
-    popThresholds.push({ id: node.id, threshold: cumulative });
+let cachedAgents = null;
+
+export function generateSimulationData(hour, scenario) {
+  if (hour === 0 || !cachedAgents) {
+    const rawAgents = generateAgents(baseNodes);
+    cachedAgents = generateAllTripChains(rawAgents, baseNodes);
   }
 
-  for (let i = 0; i < totalAgents; i++) {
-    const randNode = Math.random();
-    const homeNode = popThresholds.find(t => randNode <= t.threshold)?.id || nodes[0].id;
-    
-    const randType = Math.random();
-    let type, vehicle;
-    if (randType < 0.6) {
-      type = 'Worker';
-      vehicle = Math.random() < 0.4 ? '汽車' : (Math.random() < 0.8 ? '機車' : '大眾運輸');
-    } else if (randType < 0.8) {
-      type = 'Student';
-      vehicle = Math.random() < 0.5 ? '機車' : (Math.random() < 0.8 ? '大眾運輸' : '步行/單車');
-    } else {
-      type = 'Retiree';
-      vehicle = Math.random() < 0.5 ? '步行/單車' : (Math.random() < 0.8 ? '機車' : '大眾運輸');
-    }
-
-    agents.push({
-      id: `agent_${i}`,
-      homeNode,
-      type,
-      vehicle
-    });
-  }
-  
-  return agents;
-}
-
-export function generateSimulationData(day, scenario, totalAgents) {
   // Initialize state for the day
   let nodes = baseNodes.map(n => ({
     ...n,
@@ -97,20 +66,6 @@ export function generateSimulationData(day, scenario, totalAgents) {
   const linkMap = new Map();
   links.forEach(l => linkMap.set(l.id, l));
 
-  const worldPopulation = nodes.reduce((sum, n) => sum + n.population, 0);
-
-  // Generate Agents
-  const agents = generateAgents(totalAgents, nodes, worldPopulation);
-
-  // Pre-calculate cumulative attraction probability for destination choice
-  const totalAttraction = nodes.reduce((sum, n) => sum + (n.attraction || 1), 0);
-  const attrThresholds = [];
-  let attrCum = 0;
-  for (const node of nodes) {
-    attrCum += (node.attraction || 1) / totalAttraction;
-    attrThresholds.push({ id: node.id, threshold: attrCum });
-  }
-
   let totalTrips = 0;
   const modeCounts = { '汽車': 0, '機車': 0, '大眾運輸': 0, '步行/單車': 0 };
 
@@ -119,84 +74,62 @@ export function generateSimulationData(day, scenario, totalAgents) {
   if (scenario === 'high_temp') travelTimeModifier = 1.2;
   if (scenario === 'congestion') travelTimeModifier = 1.5;
 
-  // Process Agent Trips
-  agents.forEach(agent => {
-    // Determine Destination based on type
-    let destNodeId = agent.homeNode;
-    
-    if (agent.type === 'Worker' || agent.type === 'Student') {
-      // Commuters travel based on attraction score instead of purely random
-      const randAttr = Math.random();
-      destNodeId = attrThresholds.find(t => randAttr <= t.threshold)?.id || nodes[0].id;
-    } else if (agent.type === 'Retiree') {
-      // Retirees travel to nearby nodes
-      const neighbors = adjList[agent.homeNode];
-      if (neighbors && neighbors.length > 0) {
-        // Weighted by neighbor's attraction
-        let sumAttr = 0;
-        const nNodes = neighbors.map(nId => {
-          const node = nodes.find(n => n.id === nId);
-          sumAttr += (node ? (node.attraction || 1) : 1);
-          return { id: nId, attr: node ? (node.attraction || 1) : 1 };
-        });
+  const hourOfDay = hour % 24;
+
+  // Process Agent Trips based on their explicit schedule
+  cachedAgents.forEach(agent => {
+    // Find if the agent has a trip departing exactly at this hour
+    const trip = agent.schedule.find(t => t.departureHour === hourOfDay);
+
+    if (trip && trip.origin !== trip.destination) {
+      // Agent is traveling
+      const startNode = trip.origin;
+      const endNode = trip.destination;
+
+      const tripPath = greedyRoute(startNode, endNode, nodes);
+      if (tripPath.length > 0) {
+        totalTrips += 100;
         
-        const rAttr = Math.random() * sumAttr;
-        let cAttr = 0;
-        for (const n of nNodes) {
-          cAttr += n.attr;
-          if (rAttr <= cAttr) {
-            destNodeId = n.id;
-            break;
+        const vehicleUsed = trip.vehicle || '步行/單車';
+        if (modeCounts[vehicleUsed] !== undefined) {
+          modeCounts[vehicleUsed] += 100;
+        } else {
+          modeCounts['步行/單車'] += 100; // fallback
+        }
+
+        const originObj = nodes.find(n => n.id === startNode);
+        const destObj = nodes.find(n => n.id === endNode);
+        
+        if (originObj) originObj.outflow += 100;
+        if (destObj) {
+          destObj.inflow += 100;
+          destObj.activeAgents += 100; // Agent arriving at dest
+        }
+
+        tripPath.forEach(eid => {
+          const edge = linkMap.get(eid);
+          if (edge) {
+            edge.flow += 100;
+            const [u, v] = eid.split('-');
+            const nodeU = nodes.find(n => n.id === u);
+            const nodeV = nodes.find(n => n.id === v);
+            if (nodeU) nodeU.flowThrough += 100;
+            if (nodeV) nodeV.flowThrough += 100;
           }
-        }
+        });
+      } else {
+        // Route not found, stays at origin
+        const start = nodes.find(n => n.id === startNode);
+        if (start) start.activeAgents += 100;
       }
-    }
-
-    // Store daytimeDest on the agent for display
-    agent.daytimeDest = destNodeId;
-
-    // If destination is same as home, no inter-village travel
-    if (agent.homeNode === destNodeId) {
-      const home = nodes.find(n => n.id === agent.homeNode);
-      if (home) home.activeAgents += 1;
-      return;
-    }
-
-    // Simulate Trip: Home -> Destination (1 trip) and Destination -> Home (1 trip)
-    // We will accumulate flow for both directions
-    const tripPath = greedyRoute(agent.homeNode, destNodeId, nodes);
-    const returnPath = greedyRoute(destNodeId, agent.homeNode, nodes);
-    
-    // Valid trip
-    if (tripPath.length > 0) {
-      totalTrips += 2; // Round trip
-      modeCounts[agent.vehicle] += 2;
-
-      const originNode = nodes.find(n => n.id === agent.homeNode);
-      const destNodeObj = nodes.find(n => n.id === destNodeId);
       
-      if (originNode) originNode.outflow += 1;
-      if (destNodeObj) {
-        destNodeObj.inflow += 1;
-        destNodeObj.activeAgents += 1; // Agent is currently at destination
-      }
-
-      // Add edge flows
-      [...tripPath, ...returnPath].forEach(eid => {
-        const edge = linkMap.get(eid);
-        if (edge) {
-          edge.flow += 1;
-          const [u, v] = eid.split('-');
-          const nodeU = nodes.find(n => n.id === u);
-          const nodeV = nodes.find(n => n.id === v);
-          if (nodeU) nodeU.flowThrough += 1;
-          if (nodeV) nodeV.flowThrough += 1;
-        }
-      });
+      // Update agent's current location and activity for UI tracking
+      agent.currentLocation = endNode;
+      agent.currentActivity = trip.type;
     } else {
-      // Stayed home if path finding failed
-      const home = nodes.find(n => n.id === agent.homeNode);
-      if (home) home.activeAgents += 1;
+      // Agent is not traveling this hour, stays at their current location
+      const locObj = nodes.find(n => n.id === agent.currentLocation);
+      if (locObj) locObj.activeAgents += 100;
     }
   });
 
@@ -204,8 +137,8 @@ export function generateSimulationData(day, scenario, totalAgents) {
   nodes = nodes.map(node => {
     // Activity level includes through-traffic and local active agents
     const trafficVolume = node.inflow + node.outflow + (node.flowThrough * 0.5);
-    // Formula tuned for 442 nodes to show nice color spread
-    let congestion = (trafficVolume / (node.population * 0.1)) * travelTimeModifier;
+    // Tuned for real population scale where traffic volume is closer to population
+    let congestion = (trafficVolume / (node.population * 0.8)) * travelTimeModifier;
     if (congestion > 1) congestion = 1;
     
     return { ...node, congestion };
@@ -219,7 +152,7 @@ export function generateSimulationData(day, scenario, totalAgents) {
   return {
     nodes,
     links,
-    agents,
+    agents: cachedAgents,
     stats: {
       totalTrips,
       avgTravelTime,
