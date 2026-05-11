@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Download } from 'lucide-react';
 
 const PAGE_SIZE = 50;
 
@@ -25,6 +25,48 @@ export default function AgentListModal({ agents, nodes, onClose }) {
     return node ? node.name : nodeId;
   };
 
+  const downloadCSV = () => {
+    if (!agents || agents.length === 0) return;
+
+    const headers = [
+      'ID', 'Age', 'Gender', 'Occupation', 'Salary', 'Household_Income', 
+      'Home_Village', 'Vehicle_Ownership', 'Current_Location', 'Current_Activity',
+      'Trait_Thriftiness', 'Trait_SocialMobility', 'Trait_CarPreference', 'Description'
+    ];
+
+    const csvContent = [
+      headers.join(','),
+      ...agents.map(agent => {
+        return [
+          agent.id,
+          agent.age,
+          agent.gender,
+          agent.occupation,
+          agent.salary,
+          agent.household_income,
+          getNodeName(agent.home_village) || agent.home_village,
+          agent.vehicle_ownership,
+          getNodeName(agent.currentLocation) || agent.currentLocation,
+          agent.currentActivity || '無',
+          agent.traits?.thriftiness?.toFixed(2) || 0,
+          agent.traits?.socialMobility?.toFixed(2) || 0,
+          agent.traits?.carPreference?.toFixed(2) || 0,
+          `"${(agent.description || '').replace(/"/g, '""')}"`
+        ].join(',');
+      })
+    ].join('\n');
+
+    const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'agents_data.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
       {/* Backdrop */}
@@ -44,12 +86,22 @@ export default function AgentListModal({ agents, nodes, onClose }) {
               總代理人群體數: {agents?.length.toLocaleString() || 0} (代表約 {(agents?.length * 100).toLocaleString() || 0} 人)
             </p>
           </div>
-          <button 
-            onClick={onClose}
-            className="p-2 text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors"
-          >
-            <X size={24} />
-          </button>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={downloadCSV}
+              title="下載為 CSV"
+              className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white bg-indigo-500 hover:bg-indigo-600 rounded-lg transition-colors shadow-lg shadow-indigo-500/20"
+            >
+              <Download size={18} />
+              <span>下載 CSV</span>
+            </button>
+            <button 
+              onClick={onClose}
+              className="p-2 text-neutral-400 hover:text-white hover:bg-neutral-800 rounded-lg transition-colors"
+            >
+              <X size={24} />
+            </button>
+          </div>
         </div>
 
         {/* Content Area */}

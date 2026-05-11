@@ -1,0 +1,1311 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區保安里",
+            "occupation": "工程師",
+            "salary": 72000,
+            "household_income": 98000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性務實，重視效率與穩定。",
+            "decision_making": "傾向數據分析和風險評估，決策流程為線性、結構化。",
+            "economic_preference": "尋求高回報的投資產品，偏好品牌型商品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "女",
+            "age": 30,
+            "Home_Village": "仁德區保安里",
+            "occupation": "中小學教師",
+            "salary": 65000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台，無汽車"
+        },
+        "characteristics": {
+            "attitude": "溫和耐心，具備高度同理心與服務熱忱。",
+            "decision_making": "考慮人際關係及社會影響，決策較為周全且循序漸進。",
+            "economic_preference": "重視生活品質和安全感，傾向儲蓄或教育相關消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "女",
+            "age": 55,
+            "Home_Village": "仁德區保安里",
+            "occupation": "家庭主婦/小型手工藝品販售",
+            "salary": 8000,
+            "household_income": 98000,
+            "vehicle_ownership": "無車輛，主要步行或搭乘公車"
+        },
+        "characteristics": {
+            "attitude": "溫暖細膩，注重家庭和諧與傳統情感連結。",
+            "decision_making": "以直覺和經驗為主導，決策過程受情緒和關係影響較大。",
+            "economic_preference": "偏愛實用性、紀念價值高的物品，對消費的價格敏感度較低。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "工務工程師",
+            "salary": 72000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性、勤奮，重視家庭穩定。",
+            "decision_making": "依據成本效益分析決策，傾向選擇穩健的投資方案。",
+            "economic_preference": "追求實質資產累積，願意為提升居住品質和安全感花費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00005",
+            "gender": "女",
+            "age": 30,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "教學助理",
+            "salary": 55000,
+            "household_income": 70000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和、細膩，注重人際關係與環境美感。",
+            "decision_making": "傾向遵循社群規範與他人意見，決策過程較為謹慎。",
+            "economic_preference": "偏好體驗式消費，對服務型產品（如美容、餐飲）有較高購買力。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00006",
+            "gender": "男",
+            "age": 55,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "小店老闆",
+            "salary": 68000,
+            "household_income": 85000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重、務實，具備一定的話語權和社交手腕。",
+            "decision_making": "決策受自身經驗累積影響大，更信任傳統的商業模式。",
+            "economic_preference": "消費習慣偏向實用耐用品，對區域性服務與在地品牌忠誠度高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00007",
+            "gender": "女",
+            "age": 23,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "初階行政人員",
+            "salary": 45000,
+            "household_income": 60000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "積極、好奇，渴望學習與自我提升。",
+            "decision_making": "受潮流和社群媒體影響較大，願意嘗試新的生活方式。",
+            "economic_preference": "消費傾向追逐最新流行趨勢，對低價位的網路商品接受度高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00008",
+            "gender": "男",
+            "age": 62,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "已退休",
+            "salary": 15000,
+            "household_income": 75000,
+            "vehicle_ownership": "汽車1台"
+        },
+        "characteristics": {
+            "attitude": "平和、穩健，對生活節奏變化較為敏感。",
+            "decision_making": "決策以舒適度和健康需求為主軸，不喜歡複雜或高風險的活動。",
+            "economic_preference": "消費著重於醫療保健與高品質休閒娛樂，更重視時間價值。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00009",
+            "gender": "女",
+            "age": 18,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "學生",
+            "salary": 0,
+            "household_income": 75000,
+            "vehicle_ownership": "無車"
+        },
+        "characteristics": {
+            "attitude": "活潑、開放，充滿對未來的期待與探索精神。",
+            "decision_making": "決策過程受到學業和朋友影響最大，容易受外部刺激改變。",
+            "economic_preference": "主要消費來自零用錢或贈予，偏好具有收藏價值或具備社群認同的商品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00010",
+            "gender": "男",
+            "age": 40,
+            "Home_Village": "仁德區上崙里",
+            "occupation": "IT工程師",
+            "salary": 85000,
+            "household_income": 110000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性、外向，具備高度的學習能力和適應力。",
+            "decision_making": "傾向依據數據分析與邏輯判斷，追求效率最大化的方案。",
+            "economic_preference": "對高科技產品有天然興趣，願意為提升生活便利性或專業技能投入資金。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00011",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "國立大學行政人員",
+            "salary": 68000,
+            "household_income": 125000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實理性型，重視家庭和諧與生活品質。",
+            "decision_making": "會權衡利弊後做出選擇，傾向尋求穩定的高收入來源。",
+            "economic_preference": "優先考慮耐久性、品牌價值及居住環境的便利性。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00012",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "小型企業經理",
+            "salary": 95000,
+            "household_income": 180000,
+            "vehicle_ownership": "汽車2台，機車2台"
+        },
+        "characteristics": {
+            "attitude": "自信果決型，具備一定社交能力，喜歡主導討論。",
+            "decision_making": "行動力強，一旦決定就會全力執行，較不畏懼風險。",
+            "economic_preference": "追求高效率和高規格產品，願意為便利性支付溢價。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00013",
+            "gender": "女",
+            "age": 22,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "大學生（設計系）",
+            "salary": 5000,
+            "household_income": 110000,
+            "vehicle_ownership": "無"
+        },
+        "characteristics": {
+            "attitude": "活潑開朗型，注重個人風格與社交互動。",
+            "decision_making": "受朋友和社群影響較大，容易受到流行趨勢的牽動。",
+            "economic_preference": "偏好潮流、設計感強的商品，預算會分散在多個非必需品上。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00014",
+            "gender": "男",
+            "age": 62,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "退休教師",
+            "salary": 35000,
+            "household_income": 75000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重內斂型，具備生活經驗，喜歡閱讀和陪伴家人。",
+            "decision_making": "謹慎保守，決策過程會考慮到長遠的穩定性和風險最小化。",
+            "economic_preference": "注重實用性、耐用度及品牌信譽，不追求過度的奢華。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00015",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "醫療院所助理",
+            "salary": 49000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼型，具備服務意識，擅長處理人際關係。",
+            "decision_making": "以他人感受為優先考量，決策時會傾向選擇「最舒適」的方案。",
+            "economic_preference": "對健康相關、養生活用品有較高的消費意願。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00016",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "工程師",
+            "salary": 75000,
+            "household_income": 150000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性規劃型，注重邏輯和效率，有目標性。",
+            "decision_making": "依據數據分析和成本效益進行決策，較不容易受情緒影響。",
+            "economic_preference": "重視規格、功能性和科技含量，對品牌名稱的敏感度中等。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00017",
+            "gender": "女",
+            "age": 50,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "小型店鋪經營者",
+            "salary": 62000,
+            "household_income": 130000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "熱情開懷型，擅長社交與經營人脈，家庭觀念重。",
+            "decision_making": "傾向相信直覺和經驗判斷，決策過程會結合社會關係考量。",
+            "economic_preference": "偏好本地化、生活周邊的服務和商品，對社區經濟敏感。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00018",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "教師",
+            "salary": 59000,
+            "household_income": 115000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫柔知性型，具備耐心和教育熱忱，注重文化交流。",
+            "decision_making": "謹慎且循序漸進，重視長期發展而非短期利益。",
+            "economic_preference": "傾向購買高品質、有文化底蘊的產品或教育相關服務。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00019",
+            "gender": "女",
+            "age": 25,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "新進職場員工",
+            "salary": 45000,
+            "household_income": 90000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "積極外向型，渴望證明自我價值，具備快速學習力。",
+            "decision_making": "受外部環境和成功案例影響較大，追求社會認可度和成長性。",
+            "economic_preference": "願意為「提升自己」或「達到某個目標」而消費，對新興品牌接受度高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00020",
+            "gender": "男",
+            "age": 41,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "工程顧問",
+            "salary": 78000,
+            "household_income": 165000,
+            "vehicle_ownership": "汽車2台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "專業獨立型，專注於工作和技能提升，有一定個人空間需求。",
+            "decision_making": "以專業標準衡量一切，決策過程邏輯嚴密，追求最佳解。",
+            "economic_preference": "重視實用功能、效率工具有效的商品，對價格敏感度高但品質要求極高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00021",
+            "gender": "女",
+            "age": 58,
+            "Home_Village": "仁德區後壁里",
+            "occupation": "自由職業者（接案）",
+            "salary": 40000,
+            "household_income": 95000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "圓融隨和型，具備生活智慧，擅長居家管理與節省。",
+            "decision_making": "以家庭需求為核心考量，決策時會尋找最經濟、最實惠的平衡點。",
+            "economic_preference": "偏好高CP值、在地採購的商品，對促銷活動和折扣非常敏感。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00022",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區成功里",
+            "occupation": "IT工程師",
+            "salary": 110000,
+            "household_income": 140000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且積極，追求效率與進步。",
+            "decision_making": "數據驅動型決策者，傾向選擇風險可控、回報明確的選項。",
+            "economic_preference": "願意為提升生活品質和技術體驗而花費較高預算。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00023",
+            "gender": "女",
+            "age": 30,
+            "Home_Village": "仁德區成功里",
+            "occupation": "教學顧問",
+            "salary": 70000,
+            "household_income": 100000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，擅長溝通協調他人情緒。",
+            "decision_making": "考慮人際關係與情感影響的決策傾向較高，注重和諧性。",
+            "economic_preference": "偏好服務型消費，例如教育、旅遊或健康相關產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00024",
+            "gender": "男",
+            "age": 65,
+            "Home_Village": "仁德區成功里",
+            "occupation": "已退休",
+            "salary": 20000,
+            "household_income": 40000,
+            "vehicle_ownership": "無"
+        },
+        "characteristics": {
+            "attitude": "平靜穩重，對生活節奏變化適應性高。",
+            "decision_making": "遵循慣例和社會規範的決策模式，較少衝動消費。",
+            "economic_preference": "重視穩定性和可預測的收入來源，偏好養生與家庭活動。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00025",
+            "gender": "女",
+            "age": 40,
+            "Home_Village": "仁德區成功里",
+            "occupation": "行銷經理",
+            "salary": 90000,
+            "household_income": 150000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "外向且果斷，具有強烈的社交和領導慾望。",
+            "decision_making": "傾向採取影響力最大的策略性決策，願意承擔中等風險以換取高回報。",
+            "economic_preference": "關注品牌價值與社會地位象徵的消費品，有較高的可支配收入預算。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00026",
+            "gender": "男",
+            "age": 20,
+            "Home_Village": "仁德區成功里",
+            "occupation": "大學生",
+            "salary": 0,
+            "household_income": 60000,
+            "vehicle_ownership": "無"
+        },
+        "characteristics": {
+            "attitude": "充滿活力，對新事物的好奇心極高。",
+            "decision_making": "受同儕影響大，決策模式較為衝動和探索性，重視體驗價值。",
+            "economic_preference": "預算主要用於社交活動、學習資源（書籍/課程）及娛樂消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00027",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區成功里",
+            "occupation": "教學老師",
+            "salary": 75000,
+            "household_income": 110000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "耐心細心，富有同理心和教育熱忱。",
+            "decision_making": "以倫理道德和長期影響為基礎進行決策，重視穩定性和公益性。",
+            "economic_preference": "偏好實用、高品質且具有社會意義的商品，有節儉但注重品質。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00028",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "仁德區仁和里",
+            "occupation": "企業會計師",
+            "salary": 58000,
+            "household_income": 75000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且注重體面，傾向循規蹈矩。",
+            "decision_making": "理性規劃，權衡成本與長期效益後再做決定。",
+            "economic_preference": "偏好具備品牌保障或穩定的金融投資產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00029",
+            "gender": "女",
+            "age": 31,
+            "Home_Village": "仁德區仁和里",
+            "occupation": "國小教職員",
+            "salary": 48000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和親切，具備高度同理心，重視人際關係。",
+            "decision_making": "以情感連結為基礎，傾向尋求社會支持與共識。",
+            "economic_preference": "更願意花費在提升生活品質、教育或家庭相關的服務上。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00030",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "仁德區仁愛里",
+            "occupation": "營造工程師",
+            "salary": 68500,
+            "household_income": 79000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重實際，重視家庭穩定性與物質生活。",
+            "decision_making": "傾向理性分析成本效益，決策過程較為審慎。",
+            "economic_preference": "偏好具備保值性或實用功能的商品，注重長期投資規劃。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00031",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區仁愛里",
+            "occupation": "行政教練",
+            "salary": 56200,
+            "household_income": 78000,
+            "vehicle_ownership": "汽車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和開朗，具備良好的社交能力與同理心。",
+            "decision_making": "能兼顧情感需求與實用考量，決策時會考慮人際關係影響。",
+            "economic_preference": "願意為提升生活品質或體驗舒適感而花費，對教育相關商品有興趣。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00032",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "國中教師",
+            "salary": 75000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和理性，重視家庭穩定與教育",
+            "decision_making": "傾向遵循既有規範，決策過程穩健且考慮長遠影響。",
+            "economic_preference": "追求穩定、可預測的支出模式，對投資風險較保守。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00033",
+            "gender": "男",
+            "age": 32,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "軟體工程師",
+            "salary": 85000,
+            "household_income": 140000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "熱情外向，具備邏輯分析能力，追求效率。",
+            "decision_making": "數據驅動型決策者，傾向選擇最高效率或投資回報率最高的選項。",
+            "economic_preference": "願意為提升個人技能和職業發展投入資金，接受一定風險以求高報酬。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00034",
+            "gender": "女",
+            "age": 45,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "行政經理",
+            "salary": 68000,
+            "household_income": 105000,
+            "vehicle_ownership": "機車2台"
+        },
+        "characteristics": {
+            "attitude": "細心周到，具備協調和應變能力，重視人際關係。",
+            "decision_making": "傾向考慮所有相關人員的感受與便利性，決策過程較為謹慎平衡。",
+            "economic_preference": "偏好實用、耐用的消費品，對生活品質的提升有實際的需求。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00035",
+            "gender": "男",
+            "age": 62,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "退休店主（經營餐飲）",
+            "salary": 40000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，生活習慣簡單，注重口腹之慾與社交。",
+            "decision_making": "決策以日常便利性和家庭需求為核心，不追求複雜或高風險的選擇。",
+            "economic_preference": "消費開支主要集中在餐飲、娛樂和維持基本生活水平，對奢侈品興趣不高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00036",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "行銷企劃",
+            "salary": 78000,
+            "household_income": 135000,
+            "vehicle_ownership": "機車1台，汽車陪駕使用"
+        },
+        "characteristics": {
+            "attitude": "積極開朗，具備社交魅力，對新事物接受度高。",
+            "decision_making": "受到潮流、社會評價和個人興趣的影響較大，決策風格充滿活力。",
+            "economic_preference": "願意為提升外觀形象、追逐流行趨勢或體驗新生活而消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00037",
+            "gender": "男",
+            "age": 41,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "設備維護技術員",
+            "salary": 65000,
+            "household_income": 90000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "踏實可靠，重職責感，具備實際操作能力。",
+            "decision_making": "決策流程邏輯清晰，偏好可量化、能直接解決問題的方案。",
+            "economic_preference": "消費以功能性為主，對工具、耐用品和提升生活舒適度的產品有高需求。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00038",
+            "gender": "女",
+            "age": 21,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "學生（大學生）",
+            "salary": 0,
+            "household_income": 95000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "好奇心強，渴望獨立自主，思維活躍。",
+            "decision_making": "受同儕影響較大，決策時會考慮社會群體的認可與趨勢。",
+            "economic_preference": "消費範圍集中在教育、娛樂和社交活動上，預算來源依賴家庭支持。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00039",
+            "gender": "男",
+            "age": 55,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "公司高階主管",
+            "salary": 120000,
+            "household_income": 200000,
+            "vehicle_ownership": "汽車2台，機車無"
+        },
+        "characteristics": {
+            "attitude": "果斷自信，具備領導力，注重社會地位與面子。",
+            "decision_making": "傾向採取最高層次的戰略決策，重視品牌、權威和效率的結合。",
+            "economic_preference": "對身份象徵性消費（如名牌、高端服務）具有極高偏好。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00040",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "私人醫院護理師",
+            "salary": 82000,
+            "household_income": 125000,
+            "vehicle_ownership": "機車1台，汽車1台（輪流使用）"
+        },
+        "characteristics": {
+            "attitude": "體貼溫暖，具有同理心，工作環境壓力較大。",
+            "decision_making": "決策時高度考量他人需求與安全因素，偏好可信賴且專業的選擇。",
+            "economic_preference": "消費傾向於健康、醫療和提升個人身心舒適度的產品服務。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00041",
+            "gender": "男",
+            "age": 25,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "餐飲服務員",
+            "salary": 35000,
+            "household_income": 70000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "活潑健談，適應力強，重視人際互動。",
+            "decision_making": "決策傾向快速且具備彈性，容易受眼前環境刺激或短期誘惑影響。",
+            "economic_preference": "消費開支較為分散，注重即時滿足感和社交體驗。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00042",
+            "gender": "女",
+            "age": 48,
+            "Home_Village": "仁德區仁德里",
+            "occupation": "全職媽媽（兼職）",
+            "salary": 30000,
+            "household_income": 100000,
+            "vehicle_ownership": "機車2台"
+        },
+        "characteristics": {
+            "attitude": "溫和包容，重心在家庭，擅長細節管理。",
+            "decision_making": "決策過程以照顧家人需求為最高原則，會犧牲部分個人慾望來達成平衡。",
+            "economic_preference": "消費支出集中於子女教育、居家環境改善和健康相關的產品服務。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00043",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "仁德區文賢里",
+            "occupation": "科技業工程師",
+            "salary": 60000,
+            "household_income": 85000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性務實，注重效率與穩定性。",
+            "decision_making": "傾向依據數據分析和風險評估做出決定，規劃前會做足功課。",
+            "economic_preference": "重視高品質、耐用性高的產品；購買決策受品牌價值影響大。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00044",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "仁德區文賢里",
+            "occupation": "行政助理/店面服務業",
+            "salary": 25000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和細心，注重人際關係與家庭和諧。",
+            "decision_making": "決策時會考慮情感因素和周遭人的意見，較傾向尋求共識。",
+            "economic_preference": "偏好體驗型消費（旅行、聚餐），預算規劃上更關注CP值和生活品質。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00045",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區新田里",
+            "occupation": "IT工程師",
+            "salary": 72000,
+            "household_income": 115000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實、理性，重視效率和規劃。",
+            "decision_making": "傾向數據分析與成本效益考量，決策流程較為謹慎。",
+            "economic_preference": "偏好投資型消費，追求高CP值商品或服務。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00046",
+            "gender": "女",
+            "age": 30,
+            "Home_Village": "仁德區新田里",
+            "occupation": "教學人員",
+            "salary": 68500,
+            "household_income": 120000,
+            "vehicle_ownership": "機車1台，汽車半套牌（偶爾使用）"
+        },
+        "characteristics": {
+            "attitude": "溫和、體貼，具備良好的溝通協調能力。",
+            "decision_making": "考慮他人感受為優先，決策時傾向尋求共識。",
+            "economic_preference": "注重生活品質與精神層面的滿足，願意為了體驗消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00047",
+            "gender": "男",
+            "age": 65,
+            "Home_Village": "仁德區新田里",
+            "occupation": "已退休",
+            "salary": 0,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台（僅用於日常採買）"
+        },
+        "characteristics": {
+            "attitude": "豁達、平靜，生活節奏較緩慢。",
+            "decision_making": "依賴經驗判斷，決策風格保守且循規蹈矩。",
+            "economic_preference": "偏好傳統實體商品或在地特色消費，對新科技接受度不高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00048",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "仁德區新田里",
+            "occupation": "行政助理",
+            "salary": 53000,
+            "household_income": 95000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "積極、開朗，具備適應變化和學習的能力。",
+            "decision_making": "擅長多工處理，決策時會綜合考量時間與資源分配。",
+            "economic_preference": "有一定消費力，傾向購買實用且能提升生活效率的產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00049",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區一甲里",
+            "occupation": "IT系統工程師",
+            "salary": 82000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性且目標導向",
+            "decision_making": "傾向數據分析與風險評估，重視效率。",
+            "economic_preference": "追求品牌價值和長期穩定的投資組合。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00050",
+            "gender": "男",
+            "age": 48,
+            "Home_Village": "仁德區一甲里",
+            "occupation": "餐飲業店長",
+            "salary": 70000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且重人情味",
+            "decision_making": "依賴經驗和社交網絡，決策傾向保守但可靠。",
+            "economic_preference": "偏好具備實用性、可立即使用的消費品或穩定現金流的投資。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00051",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區一甲里",
+            "occupation": "數位行銷專員",
+            "salary": 65000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "活潑外向且具創意",
+            "decision_making": "受到社群媒體趨勢和情感影響較大，決策快速。",
+            "economic_preference": "注重生活品質、體驗消費和與潮流相關的商品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00052",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區中洲里",
+            "occupation": "企業管理階層",
+            "salary": 68000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "積極樂觀，注重社會評價和家庭穩定性。",
+            "decision_making": "傾向理性分析與風險評估，決策過程較為謹慎，會考慮長期影響。",
+            "economic_preference": "偏好具備品牌價值、可保值且利於提升地位的消費品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00053",
+            "gender": "男",
+            "age": 48,
+            "Home_Village": "仁德區中洲里",
+            "occupation": "技術服務人員",
+            "salary": 52000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重踏實，重視生活品質和穩定性，對變化較為保守。",
+            "decision_making": "依賴經驗判斷，決策流程偏向實務操作，傾向選擇已驗證的方案。",
+            "economic_preference": "注重實用性和耐用度，更願意在日常必需品上進行投資。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00054",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區中洲里",
+            "occupation": "行政助理",
+            "salary": 36000,
+            "household_income": 50000,
+            "vehicle_ownership": "無車輛，僅使用公共交通工具"
+        },
+        "characteristics": {
+            "attitude": "開朗活潑，適應力強，對新事物接受度高。",
+            "decision_making": "決策受情緒和社交關係影響較大，傾向遵循社群規範或他人的建議。",
+            "economic_preference": "偏好具有美學價值、時尚感和話題性的消費品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00055",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區二行里",
+            "occupation": "企業行銷經理",
+            "salary": 62000,
+            "household_income": 118000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重開朗，注重外在形象與社交關係。",
+            "decision_making": "傾向理性分析後再做決定，但容易受朋友圈影響而改變計畫。",
+            "economic_preference": "追求品牌價值和生活品質的提升，願意為了舒適度增加支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00056",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "仁德區二行里",
+            "occupation": "國小教師",
+            "salary": 55000,
+            "household_income": 118000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和細膩，具備極高的同理心，擅長傾聽與共情。",
+            "decision_making": "以人際關係和情感感受為主要考量點，決策過程較為周全但可能缺乏主動性。",
+            "economic_preference": "偏好實用、耐用的生活用品，對教育相關的消費具有高度意願。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00057",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "仁德區大甲里",
+            "occupation": "電機工程師/主管",
+            "salary": 62000,
+            "household_income": 115000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，重視家庭生活品質，傾向於為未來做規劃。",
+            "decision_making": "數據導向，會權衡長期效益和風險，決策過程理性且有條理。",
+            "economic_preference": "偏好儲蓄型消費，願意為了提升居住環境或子女教育而提高支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00058",
+            "gender": "女",
+            "age": 30,
+            "Home_Village": "仁德區大甲里",
+            "occupation": "中小學行政教職員",
+            "salary": 48000,
+            "household_income": 95000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "外向開朗，具備高度的同理心，注重人際關係和情感交流。",
+            "decision_making": "以情境需求為核心考量，決策時會考慮他人的感受及社會規範。",
+            "economic_preference": "偏好體驗式消費與生活品質提升，願意在社交或自我成長相關領域花費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00059",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "工程師",
+            "salary": 85000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性規劃，注重效率。",
+            "decision_making": "數據導向，偏好品牌與規格。",
+            "economic_preference": "願意為高CP值產品支付溢價。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00060",
+            "gender": "女",
+            "age": 21,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "學生",
+            "salary": 0,
+            "household_income": 45000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "追求潮流，容易受社交媒體影響。",
+            "decision_making": "群體導向，偏好外觀與體驗感。",
+            "economic_preference": "預算敏感型，但會為興趣購買。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00061",
+            "gender": "男",
+            "age": 68,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "退休教師",
+            "salary": 0,
+            "household_income": 35000,
+            "vehicle_ownership": "汽車1台（僅供閒暇）"
+        },
+        "characteristics": {
+            "attitude": "穩重保守，重視傳統與家庭關係。",
+            "decision_making": "經驗導向，信賴熟人推薦。",
+            "economic_preference": "偏好穩定性、耐用度高的產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00062",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "行政助理",
+            "salary": 48000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台、汽車半台（家庭共用）"
+        },
+        "characteristics": {
+            "attitude": "細心周到，兼顧工作與育兒生活。",
+            "decision_making": "實用導向，權衡安全性和便利性。",
+            "economic_preference": "追求高性价比的家庭用品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00063",
+            "gender": "男",
+            "age": 48,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "製造業主管",
+            "salary": 72000,
+            "household_income": 110000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實果決，有責任感。",
+            "decision_making": "權衡成本效益，注重品牌信譽。",
+            "economic_preference": "傾向購買提升工作效率的設備。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00064",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "數位行銷專員",
+            "salary": 65000,
+            "household_income": 70000,
+            "vehicle_ownership": "機車1台、汽車半台（臨時使用）"
+        },
+        "characteristics": {
+            "attitude": "積極開朗，好奇心強。",
+            "decision_making": "網路資訊導向，容易受評價影響。",
+            "economic_preference": "關注新潮產品和體驗服務。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00065",
+            "gender": "男",
+            "age": 55,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "店面服務業員工",
+            "salary": 38000,
+            "household_income": 60000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "低調內斂，重人情世故。",
+            "decision_making": "依賴直覺和熟客口碑。",
+            "economic_preference": "偏好在地小店、生活必需品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00066",
+            "gender": "女",
+            "age": 39,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "教職人員",
+            "salary": 75000,
+            "household_income": 105000,
+            "vehicle_ownership": "汽車半台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和耐心，有組織性。",
+            "decision_making": "責任導向，考量長期影響與安全。",
+            "economic_preference": "注重品質保證和教育相關產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00067",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "業務經理",
+            "salary": 90000,
+            "household_income": 180000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "積極外向，擅長交際。",
+            "decision_making": "目標導向，追求高效率和成功率。",
+            "economic_preference": "願意為提升社交形象的商品消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00068",
+            "gender": "女",
+            "age": 25,
+            "Home_Village": "仁德區仁義里",
+            "occupation": "餐飲服務員",
+            "salary": 40000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "隨和親切，適應力強。",
+            "decision_making": "環境導向，依賴當下的便利性。",
+            "economic_preference": "追求高CP值的日常消費品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00069",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "仁德區土庫里",
+            "occupation": "工程師 (資深)",
+            "salary": 62000,
+            "household_income": 150000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，注重生活品質。",
+            "decision_making": "傾向理性分析後再行動，規劃性強。",
+            "economic_preference": "偏好穩定且具備保值性的資產配置。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00070",
+            "gender": "男",
+            "age": 28,
+            "Home_Village": "仁德區土庫里",
+            "occupation": "餐飲服務業員工",
+            "salary": 42000,
+            "household_income": 135000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "開朗外向，交友廣闊，具備服務熱忱。",
+            "decision_making": "受環境和短期利益影響較大，反應快。",
+            "economic_preference": "注重即時消費體驗與社交相關的支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00071",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "仁德區土庫里",
+            "occupation": "私立學校教師",
+            "salary": 58000,
+            "household_income": 140000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，有耐心，重視家庭關係。",
+            "decision_making": "決策考量多方觀點，傾向維持穩定與平衡。",
+            "economic_preference": "願意為子女教育及居住環境投入較高比例的收入。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00072",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "仁德區太子里",
+            "occupation": "科技公司經理",
+            "salary": 68000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "外向、理性，注重效率與成就。",
+            "decision_making": "傾向數據分析和風險評估後再做決定，偏好系統化流程。",
+            "economic_preference": "追求穩定且高成長的投資，願意為提升生活品質而支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00073",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "仁德區太子里",
+            "occupation": "國中教師",
+            "salary": 45000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和、體貼，具備高度同理心。",
+            "decision_making": "考慮他人感受與社會影響為先，傾向尋求共識的解決方案。",
+            "economic_preference": "偏好教育相關或穩定型的消費，對家庭生活品質有高要求。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00074",
+            "gender": "男",
+            "age": 20,
+            "Home_Village": "仁德區太子里",
+            "occupation": "大專學生",
+            "salary": 0,
+            "household_income": 65000,
+            "vehicle_ownership": "無車，偶爾搭乘機車代步"
+        },
+        "characteristics": {
+            "attitude": "熱血、好奇心強，對新事物接受度高。",
+            "decision_making": "衝動性較高，容易受潮流影響，但學習能力強。",
+            "economic_preference": "消費傾向於體驗和社交活動，預算主要由家庭支持。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00075",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "仁德區太子里",
+            "occupation": "行政經理",
+            "salary": 62000,
+            "household_income": 115000,
+            "vehicle_ownership": "機車1台，偶爾使用汽車代步"
+        },
+        "characteristics": {
+            "attitude": "務實、有條理，擅長組織規劃。",
+            "decision_making": "邏輯性強，善於平衡工作與家庭需求，決策過程細膩周全。",
+            "economic_preference": "注重生活機能和品牌價值，願意為提升居住環境品質花費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00076",
+            "gender": "男",
+            "age": 65,
+            "Home_Village": "仁德區太子里",
+            "occupation": "退休職人",
+            "salary": 0,
+            "household_income": 40000,
+            "vehicle_ownership": "機車1台 (僅用於日常採買)"
+        },
+        "characteristics": {
+            "attitude": "穩重、平和，生活習慣規律。",
+            "decision_making": "從經驗角度出發，偏好傳統與穩定，決策過程謹慎。",
+            "economic_preference": "消費需求低，主要用於日常維護和健康相關支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00077",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "仁德區太子里",
+            "occupation": "服務業店員",
+            "salary": 43000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "開朗、親切，適應力強。",
+            "decision_making": "反應迅速，行動力高，傾向依據當下環境需求快速調整。",
+            "economic_preference": "消費相對節儉，但對社交和自我形象的維持有一定需求。"
+        }
+    }
+]

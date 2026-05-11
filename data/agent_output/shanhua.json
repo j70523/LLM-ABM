@@ -1,0 +1,767 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "善化區嘉南里",
+            "occupation": "科技業工程師",
+            "salary": 65000,
+            "household_income": 72000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩健，對家庭責任感較重，生活規律性高。",
+            "decision_making": "傾向選擇有保障的選項，決策過程會權衡短期效益與長期風險，重視品牌可靠度。",
+            "economic_preference": "偏好穩定且實用的商品或服務，購買時會仔細比較CP值，儲蓄觀念較強。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "善化區文正里",
+            "occupation": "企業管理階層",
+            "salary": 95000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重理性，重視家庭穩定與社會地位。",
+            "decision_making": "傾向從權衡成本效益的角度進行決策，偏好公開、有規劃的流程。",
+            "economic_preference": "願意為提升家族生活品質和教育資源投資大額資金。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "善化區文正里",
+            "occupation": "教職人員",
+            "salary": 60000,
+            "household_income": 120000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，重視人際關係和生活情趣。",
+            "decision_making": "傾向根據感受、情感連結或社會規範來做決定，較具彈性與協調性。",
+            "economic_preference": "偏好分散風險的消費模式，注重高品質的生活體驗而非單純的物質堆積。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "善化區什乃里",
+            "occupation": "小型企業行政人員",
+            "salary": 57000,
+            "household_income": 62000,
+            "vehicle_ownership": "機車1台，汽車0台"
+        },
+        "characteristics": {
+            "attitude": "穩健務實，注重家庭和社區關係，屬於典型的在地工薪族群。",
+            "decision_making": "決策傾向保守且成本效益導向，會仔細比較價格與品質，避免不必要的開支。",
+            "economic_preference": "偏好購買在地化、有穩定口碑的小商家服務；在消費上更願意為提升生活舒適度（如交通便利性）投入資金。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00005",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "善化區六德里",
+            "occupation": "技術服務業工程師",
+            "salary": 61000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實穩健，對生活品質有一定要求，傾向理性消費。",
+            "decision_making": "決策流程會先計算成本效益比，重視長期穩定性和功能性，較少受衝動情緒影響。",
+            "economic_preference": "偏好高CP值的耐用型商品和服務。在購車或購房時，會花時間比較多個品牌和評價。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00006",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "公司行銷經理",
+            "salary": 195000,
+            "household_income": 350000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "外向開朗，熱衷社交活動，容易受品牌和潮流影響。",
+            "decision_making": "傾向採用快速、具視覺衝擊力的方案；購買決策偏重『面子』與話題性。",
+            "economic_preference": "願意為提升生活品質或維持社交形象而花費，對高CP值商品興趣低。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00007",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "私立學校教師",
+            "salary": 182000,
+            "household_income": 360000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和內斂，具備教養感與責任心，重視穩定性。",
+            "decision_making": "理性評估需求與耐用度；購買決策受家庭成員影響大。",
+            "economic_preference": "偏好實用、高品質的商品，注重長遠使用價值和品牌信譽。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00008",
+            "gender": "男",
+            "age": 30,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "小型工程師",
+            "salary": 155000,
+            "household_income": 280000,
+            "vehicle_ownership": "機車1台，汽車待購"
+        },
+        "characteristics": {
+            "attitude": "穩重踏實，具備規劃性，對新事物接受度高。",
+            "decision_making": "採數據驅動決策；傾向尋找『最佳化』的平衡點，不會盲目跟風。",
+            "economic_preference": "注重產品規格與技術指標；有儲蓄觀念，購買習慣穩健。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00009",
+            "gender": "女",
+            "age": 28,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "行銷助理",
+            "salary": 175000,
+            "household_income": 320000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "活潑熱情，心思細膩，擅長人際溝通。",
+            "decision_making": "受社群媒體和朋友推薦影響大；購買時常考慮美觀度和搭配性。",
+            "economic_preference": "對話題性和設計感敏感，願意為符合個人風格的商品支付溢價。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00010",
+            "gender": "男",
+            "age": 68,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "退休教師",
+            "salary": 5000,
+            "household_income": 90000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "平和淡泊，注重家庭和健康生活；對科技產品接受度較低。",
+            "decision_making": "購買決策主要依賴傳統口碑或子女建議；極度厭惡複雜的操作介面。",
+            "economic_preference": "偏好實用、耐用且操作簡單的物品；消費傾向於穩定性和安全感。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00011",
+            "gender": "女",
+            "age": 19,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "學生",
+            "salary": 0,
+            "household_income": 320000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "求知慾強，對未來充滿憧憬，個性開放。",
+            "decision_making": "受興趣和學習需求驅動；購買時會參考網路評價與學生社群的意見。",
+            "economic_preference": "預算敏感度高；優先考慮能夠提升自我能力或符合潮流的商品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00012",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "小型餐飲店老闆",
+            "salary": 165000,
+            "household_income": 250000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實接地氣，注重實際營利；具備地方社群連結性。",
+            "decision_making": "決策以成本效益分析為主；購買習慣受日常工作和家庭開支影響最大。",
+            "economic_preference": "極度重視物超時的價值；消費行動多半圍繞生計維護與實用需求。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00013",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "善化區蓮潭里",
+            "occupation": "會計師",
+            "salary": 190000,
+            "household_income": 450000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "條理分明，理性分析為主；具備專業性和規劃能力。",
+            "decision_making": "數據導向決策；購買時會仔細比較規格、保固期和長期維護成本。",
+            "economic_preference": "偏好高可靠性、有系統化設計的商品或服務；重視財務規劃與效率。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00014",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "善化區頂街里",
+            "occupation": "技術工程師",
+            "salary": 83000,
+            "household_income": 92000,
+            "vehicle_ownership": "機車1台，汽車0台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，傾向遵循既定規範，對家庭經濟有高度責任感。",
+            "decision_making": "採理性決策為主，會先評估風險與收益比，在生活消費上追求穩定性而非極致的豪華感。",
+            "economic_preference": "偏好具有實用價值、耐用度高且CP值高的商品或服務，注重長期投資回報。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00015",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "善化區文昌里",
+            "occupation": "營建工程師",
+            "salary": 85000,
+            "household_income": 135000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，對家庭責任感強。",
+            "decision_making": "傾向依據成本效益進行決策，較為保守。",
+            "economic_preference": "重視長期儲蓄與房產投資。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00016",
+            "gender": "男",
+            "age": 28,
+            "Home_Village": "善化區文昌里",
+            "occupation": "餐飲業業務員",
+            "salary": 65000,
+            "household_income": 95000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "熱情開朗，喜歡與人交流，有衝勁。",
+            "decision_making": "容易受短期誘因影響，購買決策較為直觀。",
+            "economic_preference": "傾向消費體驗和社交活動的支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00017",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "善化區文昌里",
+            "occupation": "行政人員",
+            "salary": 78000,
+            "household_income": 105000,
+            "vehicle_ownership": "機車1台，有代步用汽車權益"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，擅長調解人際關係。",
+            "decision_making": "考慮到家庭成員的需求為優先考量因素。",
+            "economic_preference": "注重生活品質與子女教育的支出比例。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00018",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "善化區坐駕里",
+            "occupation": "護理師 (醫院)",
+            "salary": 115000,
+            "household_income": 140000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "謹慎負責，具備服務熱忱。",
+            "decision_making": "傾向尋找高保障、穩定且能兼顧時間彈性的工作。購買決策會權衡實用性與安全考量。",
+            "economic_preference": "重視保險和長期累積的資產價值，對醫療保健相關產品有較高的支出意願。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00019",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "善化區坐駕里",
+            "occupation": "工程技術顧問",
+            "salary": 100000,
+            "household_income": 125000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，具備家庭責任感。",
+            "decision_making": "採理性消費模式，傾向選擇CP值高、使用壽命長的產品。對品牌忠誠度較低，以功能性為優先。",
+            "economic_preference": "關注耐用性和保值性，對於大型家電或汽車的購買會進行深入研究和比較。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00020",
+            "gender": "女",
+            "age": 22,
+            "Home_Village": "善化區坐駕里",
+            "occupation": "文職助理",
+            "salary": 80000,
+            "household_income": 110000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "活潑開朗，對新事物接受度高。",
+            "decision_making": "受朋友和社交媒體影響較大，購買時容易被視覺設計或流行元素吸引。預算相對靈活。",
+            "economic_preference": "傾向消費體驗型產品（如美妝、服飾），重視外觀和潮流性，對高價耐用品的支出較為謹慎。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00021",
+            "gender": "女",
+            "age": 65,
+            "Home_Village": "善化區坐駕里",
+            "occupation": "家庭主婦",
+            "salary": 0,
+            "household_income": 120000,
+            "vehicle_ownership": "無"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，注重家庭關係與生活品質。",
+            "decision_making": "消費決策主要由子女或配偶決定。偏好傳統、安全且能帶來舒適感的產品。對健康相關資訊敏感。",
+            "economic_preference": "支出傾向於健康養生、食品安全和居家環境的改善，注重精神層面的滿足。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00022",
+            "gender": "男",
+            "age": 40,
+            "Home_Village": "善化區坐駕里",
+            "occupation": "教育訓練講師",
+            "salary": 110000,
+            "household_income": 135000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "知識型精英，有規劃性，注重個人發展。",
+            "decision_making": "消費決策基於資訊蒐集和專業評估。對教育、提升自我的產品或服務具有高支付意願。",
+            "economic_preference": "願意為高品質的學習機會、健康管理和家庭環境的升級進行投資，追求效率與知識價值。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00023",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "善化區南關里",
+            "occupation": "軟體工程師",
+            "salary": 80000,
+            "household_income": 140000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性、穩重，注重效率與規劃。",
+            "decision_making": "傾向數據分析和長期投資決策；購買時會比較CP值高或品牌信譽佳的產品。",
+            "economic_preference": "偏向實用型耐用品（如電器、家電），重視保固期和使用壽命。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00024",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "善化區南關里",
+            "occupation": "行政助理",
+            "salary": 45000,
+            "household_income": 140000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和、細心，具有良好的社區關懷意識。",
+            "decision_making": "購買時會參考周圍鄰居的評價與口碑；對價格敏感但願意為設計感付費。",
+            "economic_preference": "偏好美觀、具在地特色的服飾或生活用品；重視情感價值。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00025",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "善化區小新里",
+            "occupation": "行銷經理",
+            "salary": 110000,
+            "household_income": 125000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "外向積極，注重社交場合的形象維護。",
+            "decision_making": "傾向參考社群媒體和朋友意見，決策偏向快速且具話題性。",
+            "economic_preference": "願意花費在中高價位的品牌商品上，追求生活品質提升帶來的滿足感。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00026",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "善化區小新里",
+            "occupation": "土木工程師",
+            "salary": 98000,
+            "household_income": 105000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，理性分析問題時會帶入專業的邏輯框架。",
+            "decision_making": "決策流程較為謹慎，會權衡風險與收益比，偏好經過驗證的方案。",
+            "economic_preference": "重視耐用性和功能性，傾向購買高CP值、長期使用的實體產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00027",
+            "gender": "女",
+            "age": 68,
+            "Home_Village": "善化區小新里",
+            "occupation": "家庭主婦/退休",
+            "salary": 10000,
+            "household_income": 35000,
+            "vehicle_ownership": "無 (主要步行或搭乘公車)"
+        },
+        "characteristics": {
+            "attitude": "溫和細膩，對家庭成員的感受高度敏感，注重傳統人情味。",
+            "decision_making": "決策以「誰最舒服」為最高指導原則，較不追求新潮或挑戰性。",
+            "economic_preference": "預算分配著重於餐食、健康和孝親相關支出，對奢侈品興趣不高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00028",
+            "gender": "男",
+            "age": 32,
+            "Home_Village": "善化區小新里",
+            "occupation": "IT軟體工程師",
+            "salary": 105000,
+            "household_income": 120000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "聰明開朗，對科技產品充滿熱情，喜歡分享最新的資訊。",
+            "decision_making": "決策受資訊流影響大，傾向選擇能提高效率、具備智能化的方案。",
+            "economic_preference": "願意投資於提升個人技能或興趣的課程與電子設備，追求數位生活體驗。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00029",
+            "gender": "女",
+            "age": 25,
+            "Home_Village": "善化區小新里",
+            "occupation": "服務業店員",
+            "salary": 48000,
+            "household_income": 65000,
+            "vehicle_ownership": "無 (主要步行或搭乘公車)"
+        },
+        "characteristics": {
+            "attitude": "活潑親切，觀察力強，擅長與人建立初步的信任關係。",
+            "decision_making": "決策容易受當下情緒和周遭環境影響，傾向選擇低成本、高可及性的選項。",
+            "economic_preference": "消費習慣較為敏感，更偏好折扣資訊和實惠、具有話題感的輕奢品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00030",
+            "gender": "男",
+            "age": 75,
+            "Home_Village": "善化區小新里",
+            "occupation": "退休農民/祖父",
+            "salary": 0,
+            "household_income": 20000,
+            "vehicle_ownership": "自行車1輛 (或無)"
+        },
+        "characteristics": {
+            "attitude": "懷舊溫和，喜歡分享生活經驗，對傳統文化有深厚感情。",
+            "decision_making": "決策傾向保守穩健，會優先考慮家庭的穩定性和長輩的感受。",
+            "economic_preference": "消費著重於健康飲食、農產品或能讓家人感到安心舒適的實用物品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00031",
+            "gender": "男",
+            "age": 48,
+            "Home_Village": "善化區東關里",
+            "occupation": "工程顧問/中階主管",
+            "salary": 135000,
+            "household_income": 162000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重、務實，注重家庭穩定和社會地位，有一定程度的保守性。",
+            "decision_making": "傾向權衡風險與收益，決策過程會考慮到長期的穩定性和可預測性，而非衝動的刺激。習慣尋求專業諮詢或參考他人意見後再做決定。",
+            "economic_preference": "偏好具備品牌保障和長期使用壽命的高品質產品，對居住環境和子女教育有高額支出意願，消費結構穩定且理性。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00032",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "善化區牛庄里",
+            "occupation": "軟體工程師",
+            "salary": 72000,
+            "household_income": 130000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性務實，重視效率與穩定性。",
+            "decision_making": "傾向透過數據和邏輯分析做決策，規劃前會進行市場調查。",
+            "economic_preference": "偏好穩健投資，願意為提升生活品質而消費，但對極端奢侈品持謹慎態度。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00033",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "善化區牛庄里",
+            "occupation": "私立學校教師",
+            "salary": 65000,
+            "household_income": 130000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，具備高度的同理心，注重人際關係與家庭和諧。",
+            "decision_making": "傾向考慮他人感受和長期影響，決策過程較為細膩周全，會尋求社群意見。",
+            "economic_preference": "重視生活品質及穩定性消費，對教育相關產品或服務有高購買意願。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00034",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "善化區光文里",
+            "occupation": "工程師",
+            "salary": 98000,
+            "household_income": 120000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性務實，注重家庭穩定與規劃。",
+            "decision_making": "傾向考慮長期效益和風險評估，決策過程較為謹慎。",
+            "economic_preference": "偏好儲蓄型消費，會願意為了高品質耐用商品而支付溢價。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00035",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "善化區光文里",
+            "occupation": "教學老師",
+            "salary": 85000,
+            "household_income": 105000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，重視人際關係與社群連結。",
+            "decision_making": "傾向以情感價值為導向，在選擇時會考慮他人的感受。",
+            "economic_preference": "注重生活品質的提升，願意花費在家庭娛樂或教育相關產品上。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00036",
+            "gender": "男",
+            "age": 28,
+            "Home_Village": "善化區光文里",
+            "occupation": "業務員",
+            "salary": 75000,
+            "household_income": 90000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "開朗熱情，交際能力強，具備積極的行動力。",
+            "decision_making": "傾向於即時決策，受外部環境刺激和人脈影響較大。",
+            "economic_preference": "消費觀念偏向追逐潮流與面子工程，對折扣敏感。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00037",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "善化區光文里",
+            "occupation": "家庭主婦",
+            "salary": 15000,
+            "household_income": 105000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "細心溫柔，擅長居家管理與情緒支持。",
+            "decision_making": "決策重心在家庭成員的舒適度和安全感，生活節奏受家人影響大。",
+            "economic_preference": "消費需求集中在食品、日用品和育兒相關產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00038",
+            "gender": "男",
+            "age": 65,
+            "Home_Village": "善化區光文里",
+            "occupation": "退役軍人",
+            "salary": 40000,
+            "household_income": 70000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "穩重內斂，有傳統的社會觀念和生活習慣。",
+            "decision_making": "偏好熟悉且傳統的方式，較抗拒快速改變的科技與生活模式。",
+            "economic_preference": "消費以實用性和耐久性為首要考量，對高科技產品興趣不高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00039",
+            "gender": "女",
+            "age": 24,
+            "Home_Village": "善化區光文里",
+            "occupation": "行銷助理",
+            "salary": 78000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "活潑外向，具備學習新事物的熱忱和好奇心。",
+            "decision_making": "容易受到流行文化和社交媒體的影響，追求個人風格表達。",
+            "economic_preference": "消費傾向於體驗型、視覺化的商品（如服裝、美妝），對品牌有一定追捧度。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00040",
+            "gender": "女",
+            "age": 20,
+            "Home_Village": "善化區光文里",
+            "occupation": "大學生",
+            "salary": 0,
+            "household_income": 95000,
+            "vehicle_ownership": "無車輛"
+        },
+        "characteristics": {
+            "attitude": "求知慾強，充滿活力，對未來規劃有憧憬。",
+            "decision_making": "決策受學業和朋友群影響大，尚未確立穩定的生活模式。",
+            "economic_preference": "消費需求偏向學習資源、社交活動及學生優惠產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00041",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "善化區胡厝里",
+            "occupation": "工程師",
+            "salary": 78000,
+            "household_income": 125000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "理性務實，注重家庭穩定性",
+            "decision_making": "傾向權衡利弊後做出最經濟效益高的選擇",
+            "economic_preference": "偏好具備耐用度、二手市場價值高的大件消費品"
+        }
+    },
+    {
+        "identity": {
+            "id": "00042",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "善化區胡厝里",
+            "occupation": "行政助理",
+            "salary": 69000,
+            "household_income": 125000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和體貼，重視人際關係與社區連結",
+            "decision_making": "容易受他人的意見影響，傾向尋求共識點",
+            "economic_preference": "願意為提升生活品質或維護社交形象而花費金錢"
+        }
+    },
+    {
+        "identity": {
+            "id": "00043",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "善化區田寮里",
+            "occupation": "機械技師",
+            "salary": 58000,
+            "household_income": 123000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，重視家庭穩定性。",
+            "decision_making": "傾向選擇成本效益最高且風險最低的選項。",
+            "economic_preference": "偏好具備保值性的資產，如房地產或金屬類投資。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00044",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "善化區田寮里",
+            "occupation": "行政管理員",
+            "salary": 45000,
+            "household_income": 123000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "細心周到，具備良好的社交能力。",
+            "decision_making": "重視人際關係與社會評價，會考慮他人的感受來做決定。",
+            "economic_preference": "願意為提升生活品質和體驗感而支出，對教育投資較積極。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00045",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "善化區胡家里",
+            "occupation": "行政人員",
+            "salary": 52000,
+            "household_income": 60000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩健，注重家庭生活品質，性格上偏向規劃與執行。",
+            "decision_making": "決策過程會先評估成本效益和風險等級，傾向選擇經過市場驗證、口碑良好的品牌或服務。",
+            "economic_preference": "重視穩定性與可預測性，儲蓄能力較佳，消費習慣偏向實用型商品而非過度追求潮流的奢侈品。"
+        }
+    }
+]

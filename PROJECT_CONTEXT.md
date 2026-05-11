@@ -53,3 +53,12 @@ Because the primary deliverable is often the standalone HTML file:
 - **Baseline:** Standard travel times and mode shares.
 - **High Temp (高溫炎熱):** Increases the use of cars vs active transport, multiplying overall travel time (`travelTimeModifier = 1.2`).
 - **Congestion (壅塞敏感):** Substantially decreases network efficiency, increasing simulated travel times (`travelTimeModifier = 1.5`).
+
+## AI Guidelines (Crucial)
+The user interacts with this project by opening the standalone HTML file directly (typically `TainanTrafficSim.html` or `dist/index.html`) via the browser's file protocol, **NOT** via a terminal dev server.
+
+**Therefore, for EVERY change made to the `src/` directory, you MUST:**
+1. Run `npm run build` to compile the changes.
+2. Synchronize the output by running `Copy-Item dist\index.html TainanTrafficSim.html -Force`.
+3. Inform the user that the build is complete and they can refresh their browser to see the changes.
+

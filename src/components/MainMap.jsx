@@ -170,27 +170,92 @@ export default function MainMap({ nodes, links, isPlaying }) {
         )}
       </TransformWrapper>
 
-      {/* Floating Tooltip */}
       {selectedNode && (
-        <div className="absolute top-8 right-[340px] z-50 bg-neutral-900/95 backdrop-blur border border-neutral-700 p-5 rounded-2xl shadow-2xl pointer-events-auto min-w-[200px]">
+        <div className="absolute top-8 right-[340px] z-50 bg-neutral-900/95 backdrop-blur border border-neutral-700 p-5 rounded-2xl shadow-2xl pointer-events-auto min-w-[240px]">
           <h3 className="text-white font-bold text-xl mb-1">{selectedNode.name}</h3>
           <div className="mt-4 text-sm text-neutral-300 space-y-2">
+
+            {/* Population */}
             <p className="flex justify-between">
               <span>村里總人口:</span>
               <span className="text-white font-mono">{selectedNode.population.toLocaleString()} 人</span>
             </p>
+
+            {/* Gender breakdown */}
+            {selectedNode.male_ratio !== undefined && (() => {
+              const maleRatio  = selectedNode.male_ratio;
+              const femaleRatio = 1 - maleRatio;
+              const maleCnt  = Math.round(selectedNode.population * maleRatio);
+              const femaleCnt = selectedNode.population - maleCnt;
+              return (
+                <>
+                  <p className="flex justify-between">
+                    <span>♂ 男性:</span>
+                    <span className="text-blue-300 font-mono">
+                      {maleCnt.toLocaleString()} 人 ({(maleRatio * 100).toFixed(1)}%)
+                    </span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span>♀ 女性:</span>
+                    <span className="text-pink-300 font-mono">
+                      {femaleCnt.toLocaleString()} 人 ({(femaleRatio * 100).toFixed(1)}%)
+                    </span>
+                  </p>
+                  {/* Gender ratio bar */}
+                  <div className="flex h-2 rounded-full overflow-hidden mt-1">
+                    <div className="bg-blue-400" style={{ width: `${maleRatio * 100}%` }} />
+                    <div className="bg-pink-400 flex-1" />
+                  </div>
+                </>
+              );
+            })()}
+
+            <div className="h-px bg-neutral-800 my-2" />
+
+            {/* Active agents & congestion */}
             <p className="flex justify-between">
               <span>目前活躍 Agents:</span>
               <span className="text-blue-400 font-bold font-mono">{selectedNode.activeAgents.toLocaleString()} 人</span>
             </p>
-            <div className="h-px bg-neutral-800 my-2" />
             <p className="flex justify-between">
               <span>當下壅塞度:</span>
               <span className={clsx("font-bold font-mono", selectedNode.congestion > 0.8 ? "text-red-400" : "text-yellow-400")}>
                 {(selectedNode.congestion * 100).toFixed(0)}%
               </span>
             </p>
+
+            {/* Income */}
+            {selectedNode.income_mean !== undefined && (
+              <>
+                <div className="h-px bg-neutral-800 my-2" />
+                <p className="text-xs text-neutral-500 uppercase tracking-wider mb-1">綜合所得 (千元/年)</p>
+                <p className="flex justify-between">
+                  <span>平均數:</span>
+                  <span className="text-emerald-400 font-mono">{selectedNode.income_mean.toLocaleString()} 千</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>中位數:</span>
+                  <span className="text-emerald-300 font-mono">{selectedNode.income_median.toLocaleString()} 千</span>
+                </p>
+                <p className="flex justify-between text-xs text-neutral-400">
+                  <span>Q1 / Q3:</span>
+                  <span className="font-mono">{selectedNode.income_q1.toLocaleString()} / {selectedNode.income_q3.toLocaleString()} 千</span>
+                </p>
+                {/* Income bar: Q1 | Median | Q3 relative to Q3 */}
+                <div className="relative h-2 bg-neutral-700 rounded-full mt-1 overflow-hidden">
+                  <div
+                    className="absolute h-full bg-emerald-600 rounded-full"
+                    style={{ left: 0, width: `${(selectedNode.income_q3 / Math.max(selectedNode.income_q3 * 1.2, 1)) * 100}%` }}
+                  />
+                  <div
+                    className="absolute h-full w-0.5 bg-emerald-300"
+                    style={{ left: `${(selectedNode.income_median / Math.max(selectedNode.income_q3 * 1.2, 1)) * 100}%` }}
+                  />
+                </div>
+              </>
+            )}
           </div>
+
           <button
             onClick={() => setSelectedNode(null)}
             className="mt-4 w-full py-2 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-xs text-neutral-400"
@@ -199,6 +264,7 @@ export default function MainMap({ nodes, links, isPlaying }) {
           </button>
         </div>
       )}
+
 
       <style>{`
         @keyframes dash {

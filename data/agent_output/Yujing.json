@@ -1,0 +1,53 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "玉井區望明里",
+            "occupation": "工程師/技術主管",
+            "salary": 48000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車1台，機車2台"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，注重生活品質與家庭規劃。",
+            "decision_making": "傾向理性分析後再做決定，購買決策受財務預算影響較大。",
+            "economic_preference": "追求穩定收入來源，偏好高耐用度、品牌信譽良好的產品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "女",
+            "age": 38,
+            "Home_Village": "玉井區望明里",
+            "occupation": "辦公室行政人員",
+            "salary": 45000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車半台，機車2台"
+        },
+        "characteristics": {
+            "attitude": "溫和親切，注重家庭關係與社交生活。",
+            "decision_making": "受人際影響較大，購買決策會考量外觀、便利性和社群認可度。",
+            "economic_preference": "重視消費體驗，對服務品質要求高，願意為提升生活情趣花費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "玉井區層林里",
+            "occupation": "小型企業管理員",
+            "salary": 48000,
+            "household_income": 52000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "穩健務實型，注重生活品質的提升與穩定性。",
+            "decision_making": "傾向尋求高CP值或有長期使用壽命的產品，購買決策會經過多方比較考量。",
+            "economic_preference": "重視必需品支出比例，在非必要開支上會節制消費，偏好在地小店或實惠的品牌。"
+        }
+    }
+]

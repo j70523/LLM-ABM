@@ -63,9 +63,39 @@ export function generateAgents(nodes) {
 
   for (const node of nodes) {
     const numAgents = Math.floor(node.population / 100);
-    
+
+    // Village-level real male ratio from population registry
+    const maleRatio = (node.male_ratio !== undefined) ? node.male_ratio : 0.5;
+
+    // Village income distribution (千元/年 -> 元/月 = *1000/12)
+    // Fallback to reasonable Tainan averages if data missing
+    const incQ1     = (node.income_q1     ?? 280)  * 1000 / 12;  // ~23,333/mo
+    const incMedian = (node.income_median ?? 500)  * 1000 / 12;  // ~41,667/mo
+    const incQ3     = (node.income_q3     ?? 1000) * 1000 / 12;  // ~83,333/mo
+    const incMean   = (node.income_mean   ?? 750)  * 1000 / 12;  // ~62,500/mo
+
+    // Helper: draw salary from village income distribution.
+    // Maps a [0,1] uniform draw to an approximate income using Q1/Median/Q3 as knots.
+    function drawIncome(u) {
+      if (u < 0.25) {
+        // Bottom quartile: linear between 0 and Q1
+        return Math.round(incQ1 * (u / 0.25));
+      } else if (u < 0.5) {
+        // Q1 to Median
+        return Math.round(incQ1 + (incMedian - incQ1) * ((u - 0.25) / 0.25));
+      } else if (u < 0.75) {
+        // Median to Q3
+        return Math.round(incMedian + (incQ3 - incMedian) * ((u - 0.5) / 0.25));
+      } else {
+        // Top quartile: linear extrapolation beyond Q3 (capped at 3x mean)
+        const cap = incMean * 3;
+        return Math.round(Math.min(incQ3 + (incQ3 - incMedian) * 2 * ((u - 0.75) / 0.25), cap));
+      }
+    }
+
     for (let i = 0; i < numAgents; i++) {
-      const gender = Math.random() < 0.5 ? 'M' : 'F';
+      // Gender drawn from real village male ratio
+      const gender = Math.random() < maleRatio ? 'M' : 'F';
       
       // Age distribution
       const randAge = Math.random();
@@ -75,7 +105,7 @@ export function generateAgents(nodes) {
       else if (randAge < 0.80) age = getRandomInt(25, 64);
       else age = getRandomInt(65, 90);
       
-      // Occupation & Salary logic
+      // Occupation & Salary logic — salary drawn from village income distribution
       let occupation, salary;
       if (age < 6) {
         occupation = 'Toddler';
@@ -89,11 +119,13 @@ export function generateAgents(nodes) {
           salary = 0;
         } else {
           occupation = 'Worker';
-          salary = getRandomInt(30000, 120000);
+          // Draw from village income distribution (working-age adults)
+          salary = Math.max(10000, drawIncome(Math.random()));
         }
       } else {
         occupation = 'Retiree';
-        salary = getRandomInt(10000, 40000);
+        // Retirees typically earn ~40-60% of working adults in the village
+        salary = Math.max(5000, Math.round(drawIncome(Math.random()) * 0.5));
       }
       
       const household_income = salary + getRandomInt(20000, 150000);

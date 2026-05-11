@@ -1,0 +1,138 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "將軍區長榮里",
+            "occupation": "行政管理員",
+            "salary": 60000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台，共用汽車(停車位)"
+        },
+        "characteristics": {
+            "attitude": "穩健務實，注重家庭生活品質與穩定性。",
+            "decision_making": "傾向風險保守的決策模式，購買大型物品會進行詳細比較和規劃。",
+            "economic_preference": "偏好高CP值、具備耐用性的商品，消費習慣平穩，不追求過度的品牌炫耀。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "將軍區玉山里",
+            "occupation": "行政專員",
+            "salary": 45000,
+            "household_income": 45000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，注重生活品質而非物質堆砌，對家庭責任感較強。",
+            "decision_making": "傾向循序漸進的規劃，在重大決定前會考慮風險評估與長期效益，理性消費。",
+            "economic_preference": "偏好穩定性高的投資管道，願意為提升居住環境舒適度和生活便利性進行支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "將軍區鯤鯓里",
+            "occupation": "企業管理師",
+            "salary": 48000,
+            "household_income": 65000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重理性，傾向尋求穩定與成就感。",
+            "decision_making": "權衡利弊後再決定，重視社會評價和長期規劃。",
+            "economic_preference": "偏好品牌、品質有保障的產品，願意為提升生活質感花費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "女",
+            "age": 32,
+            "Home_Village": "將軍區鯤鯓里",
+            "occupation": "教育資源顧問",
+            "salary": 40000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和細膩，具備高度的同理心與溝通能力。",
+            "decision_making": "以人際關係和感受為主軸，傾向尋求共識而非絕對利益。",
+            "economic_preference": "注重實用性、環保概念或能提升生活舒適度的消費品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00005",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "將軍區西甲里",
+            "occupation": "私營企業經理",
+            "salary": 52000,
+            "household_income": 130000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且有責任感，注重家庭穩定性。",
+            "decision_making": "傾向理性分析後做決定，在金錢和時間分配上較為保守。",
+            "economic_preference": "偏好儲蓄型消費，重視耐用性和長期價值。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00006",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "將軍區西甲里",
+            "occupation": "中學教師",
+            "salary": 51000,
+            "household_income": 130000,
+            "vehicle_ownership": "汽車共用，機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和開朗，具備良好的社交能力，注重人際關係。",
+            "decision_making": "考慮到他人感受後做決定，傾向平衡生活品質與經濟支出。",
+            "economic_preference": "願意為提升居住環境或家庭體驗消費，對教育相關產品有較高興趣。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00007",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "將軍區將軍里",
+            "occupation": "專業技術人員",
+            "salary": 40000,
+            "household_income": 42000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實、穩重，注重家庭的穩定規劃。",
+            "decision_making": "傾向從經濟效益和長期居住舒適度角度進行決策。",
+            "economic_preference": "追求可預測性的支出模式，願意在生活品質和投資之間取得平衡。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00008",
+            "gender": "女",
+            "age": 35,
+            "Home_Village": "將軍區鯤溟里",
+            "occupation": "行政助理",
+            "salary": 38000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台，汽車共用一台"
+        },
+        "characteristics": {
+            "attitude": "溫和且注重人際關係，擅長協調團隊氣氛。",
+            "decision_making": "偏向理性分析與尋求共識，但在家庭重大決策上會參考年長的意見。",
+            "economic_preference": "重視生活品質的穩定性，願意為提升居住環境和子女教育投入資金。"
+        }
+    }
+]

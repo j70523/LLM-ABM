@@ -1,0 +1,70 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "麻豆區安正里",
+            "occupation": "會計師/辦公室職員",
+            "salary": 60000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，注重家庭和財務規劃。",
+            "decision_making": "傾向基於數據分析和風險評估的理性決策。",
+            "economic_preference": "尋求穩定、具成長潛力的投資標的，重視生活品質提升。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "麻豆區謝厝寮里",
+            "occupation": "工程師（科技業）",
+            "salary": 60000,
+            "household_income": 85000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且理性，傾向遵循既定規則。",
+            "decision_making": "數據導向決策者，會權衡風險與效益後再行動。",
+            "economic_preference": "追求穩定增長型投資，偏好具備長期價值資產。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "女",
+            "age": 45,
+            "Home_Village": "麻豆區謝厝寮里",
+            "occupation": "國小教師（公立學校）",
+            "salary": 52000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "溫和耐心，重視人情連結與社群關係。",
+            "decision_making": "考慮他人感受後再做決定，決策過程較為謹慎。",
+            "economic_preference": "偏好穩定消費型產品，注重生活品質的提升而非極端投資。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "男",
+            "age": 41,
+            "Home_Village": "麻豆區安業里",
+            "occupation": "製造業技術人員",
+            "salary": 62000,
+            "household_income": 70000,
+            "vehicle_ownership": "機車1台，無汽車"
+        },
+        "characteristics": {
+            "attitude": "務實穩重，注重生活品質與家庭規劃。",
+            "decision_making": "決策傾向保守穩健，會先評估長期財務可行性後再行動。",
+            "economic_preference": "偏好高CP值的耐用品消費（如家電、交通工具），而非短期衝動的奢侈品。"
+        }
+    }
+]

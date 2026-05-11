@@ -1,0 +1,138 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "龍崎區牛埔里",
+            "occupation": "機械設備工程師",
+            "salary": 62000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車1台、機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重且務實，重視家庭和穩定性，較少參與高風險的社交活動。",
+            "decision_making": "傾向理性評估成本與效益，在消費上會先比較耐用度與使用年限，決策偏向保守。",
+            "economic_preference": "優先考慮具有保值性的資產投入，例如房地產或穩定增值的投資工具，不追求過度的奢侈品消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "龍崎區楠坑里",
+            "occupation": "工程師 (科技業)",
+            "salary": 45000,
+            "household_income": 55000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重、務實，重視家庭穩定與生活品質。",
+            "decision_making": "注重長期規劃和成本效益分析，決策過程較為理性且謹慎。",
+            "economic_preference": "偏好中等品質、高CP值的消費品，同時有規律的儲蓄習慣。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "龍崎區大坪里",
+            "occupation": "行政職員",
+            "salary": 47667,
+            "household_income": 62000,
+            "vehicle_ownership": "汽車0台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重且務實，注重家庭生活品質。",
+            "decision_making": "傾向遵循既有規矩和經濟效益評估的決策方式，屬於謹慎型決策者。",
+            "economic_preference": "偏好穩定且可預測的消費項目，會優先規劃交通或生活必需品的支出。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "龍崎區龍船里",
+            "occupation": "電子科技業技術員",
+            "salary": 62000,
+            "household_income": 95000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實且穩重，注重家庭生活品質與穩定性。",
+            "decision_making": "傾向透過理性分析和比較成本效益來做出重大決定，較少衝動消費。",
+            "economic_preference": "偏好具備實用性和品牌信譽的產品，重視長期價值而非短期潮流。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00005",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "龍崎區中坑里",
+            "occupation": "技術人員",
+            "salary": 60000,
+            "household_income": 85000,
+            "vehicle_ownership": "機車1台，汽車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，具備家庭責任感，注重生活品質的穩定性。",
+            "decision_making": "決策偏向保守和實際效益，會仔細權衡長期財務規劃與短期消費需求。",
+            "economic_preference": "傾向於將收入用於改善居住環境或投資教育資源，而非追求高風險的奢侈品消費。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00006",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "龍崎區石[曹]里",
+            "occupation": "小型製造業技術員",
+            "salary": 63000,
+            "household_income": 70000,
+            "vehicle_ownership": "持有汽車0台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，傾向於與鄰里和諧相處，生活重心放在家庭穩定。",
+            "decision_making": "採行保守決策模式，購買大型物品前會進行詳細比較，優先考慮CP值高的實用產品。",
+            "economic_preference": "重視日常生活的必需品消費，對金融投資興趣一般，更傾向於將收入用於房產或子女教育。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00007",
+            "gender": "男",
+            "age": 35,
+            "Home_Village": "龍崎區崎頂里",
+            "occupation": "機械設備技術員",
+            "salary": 55000,
+            "household_income": 62000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "務實穩健，注重生活品質的提升，對家庭穩定性有較高要求。",
+            "decision_making": "決策傾向於理性分析和成本效益評估，偏好具備可靠基礎設施或服務的選擇。",
+            "economic_preference": "願意投資於能提高工作效率或提升居住舒適度的產品與服務，重視耐用度和實用性。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00008",
+            "gender": "男",
+            "age": 45,
+            "Home_Village": "龍崎區土崎里",
+            "occupation": "技術工",
+            "salary": 42167,
+            "household_income": 60000,
+            "vehicle_ownership": "機車1台，偶爾搭乘汽車"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，重視家庭生活和社區關係。",
+            "decision_making": "傾向選擇穩定、可預測的方案，決策過程較為謹慎。",
+            "economic_preference": "偏好可靠且持續性的收入來源，追求居住環境的穩定性而非高風險投資。"
+        }
+    }
+]

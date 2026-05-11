@@ -1,0 +1,104 @@
+[
+    {
+        "identity": {
+            "id": "00001",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "南化區東和里",
+            "occupation": "設備技術員",
+            "salary": 58000,
+            "household_income": 75000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實穩健型，注重家庭生活品質與穩定性。",
+            "decision_making": "傾向風險較低的消費決策，在購買大型資產前會進行詳細的成本效益評估。",
+            "economic_preference": "優先規劃長期儲蓄和房貸攤還能力，對保險與金融理財產品有興趣。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00002",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "南化區南化里",
+            "occupation": "科技業工程師",
+            "salary": 52000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實且理性，注重工作成就感與穩定性。",
+            "decision_making": "決策傾向依據數據分析和成本效益評估；在消費上較為規劃。",
+            "economic_preference": "偏好具備品牌保障或高功能性的產品；儲蓄比例高。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00003",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "南化區西埔里",
+            "occupation": "商業行政人員",
+            "salary": 42000,
+            "household_income": 65000,
+            "vehicle_ownership": "機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重務實，注重家庭和生活品質的穩定性。",
+            "decision_making": "傾向從眾或保守選擇，在重大消費上會先進行多方比較評估風險。",
+            "economic_preference": "偏好可預期的固定收入來源，對投資具有一定興趣但不會投入極高風險的商品。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00004",
+            "gender": "男",
+            "age": 38,
+            "Home_Village": "南化區中坑里",
+            "occupation": "行政助理",
+            "salary": 45000,
+            "household_income": 62000,
+            "vehicle_ownership": "汽車1台，機車1台"
+        },
+        "characteristics": {
+            "attitude": "穩重、務實，重視家庭和生活品質，處事有條理。",
+            "decision_making": "傾向理性規劃與謹慎評估風險。在重大消費前會進行多方比較與權衡利弊。",
+            "economic_preference": "追求穩定收入來源，具有穩健的儲蓄習慣。更願意將資源投入於提升生活品質和家庭資產累積。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00005",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "南化區小崙里",
+            "occupation": "工廠資深技術員",
+            "salary": 39000,
+            "household_income": 52000,
+            "vehicle_ownership": "機車1台，汽車無"
+        },
+        "characteristics": {
+            "attitude": "務實穩健型，生活重心在家庭穩定與規劃。",
+            "decision_making": "傾向保守決策，重視實際效益和長期可持續性。購買或投資前會進行詳細成本計算。",
+            "economic_preference": "偏好高CP值的耐用消費品，對品牌有要求但不會盲目追求奢華。"
+        }
+    },
+    {
+        "identity": {
+            "id": "00006",
+            "gender": "男",
+            "age": 42,
+            "Home_Village": "南化區北平里",
+            "occupation": "國營事業行政人員",
+            "salary": 42000,
+            "household_income": 50000,
+            "vehicle_ownership": "機車1台，汽車預定"
+        },
+        "characteristics": {
+            "attitude": "穩重、務實，注重家庭和生活品質，對周遭環境變化抱持謹慎態度。",
+            "decision_making": "傾向依循既有流程與數據支持做決策，不喜歡高風險的投資或改變；理性且具有規劃性。",
+            "economic_preference": "偏好穩定的資產增值和穩健型理財產品（如基金、房產），比起追求短線的高收益更看重長期保障。"
+        }
+    }
+]
